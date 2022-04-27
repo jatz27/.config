@@ -24,3 +24,14 @@ Invoke-Expression (
 choco install nvm -y
 # PyENV
 choco install pyenv-win -y
+
+# Configuracion de Git 
+New-Item -ItemType SymbolicLink -Path $HOME\.gitconfig -Value $HOME\.config\.gitconfig
+# Configuracion de Nombre y Correo para git
+echo "Ingrese nombre para git: " 
+$name = Read-Host
+git config --system user.name $name
+
+echo "Ingrese email para git: " 
+$email = Read-Host
+git config --system user.email $email
