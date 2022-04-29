@@ -64,8 +64,8 @@
           "type": "npm",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#cc3838",
-          "background": "#ffffff",
+          "foreground": "#ffffff",
+          "background": "#cc3838",
           "template": "\ue71e {{ .Full }} "
         },
         {
