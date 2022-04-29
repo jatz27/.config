@@ -34,6 +34,7 @@ Set-Alias cat bat
 Set-Alias pcstop Stop-Computer
 Set-Alias pcreset Restart-Computer
 Set-Alias touch New-Item
+Set-Alias g git
 function a {
 	cd A:
 }
