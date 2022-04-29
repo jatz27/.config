@@ -22,9 +22,9 @@ nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
 " Alternate way to save
-nnoremap <C-s> :w<CR>
+nnoremap <A-s> :w<CR>
 " Alternate way to quit
-nnoremap <C-q> :q!<CR>
+nnoremap <A-q> :q!<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 " <TAB>: completion.
@@ -57,3 +57,6 @@ nmap <leader>dh :split<CR>
 
 " Maximisar ventanas 
 nmap <A-m> :MaximizerToggle<CR>
+
+" Desahacer
+nmap <C-z> u

@@ -1,6 +1,6 @@
 " Change these if you want
 let g:signify_sign_add               = '+'
-let g:signify_sign_delete            = '_'
+let g:signify_sign_delete            = '-'
 let g:signify_sign_delete_first_line = '‾'
 let g:signify_sign_change            = '~'
 
@@ -20,7 +20,7 @@ nmap <leader>gh :SignifyToggleHighlight<cr>
 "mappin git
 nmap <leader>gs :Git status<cr>
 nmap <leader>ga :Git add
-nmap <leader>gc :Git commit -m ""
+nmap <leader>gc :Git commit -a
 nmap <leader>gp :Git push origin
 nmap <leader>gf :Gdiffsplit<cr>
 nmap <leader>gb :Git blame<cr>

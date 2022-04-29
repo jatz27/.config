@@ -24,5 +24,7 @@
       "open"
     ],
     "v": "open:vsplit"
-  }
+  },
+  //powershell configuracion
+    "powershell.integratedConsole.showOnStartup": false
 }
