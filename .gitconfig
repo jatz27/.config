@@ -1,4 +1,4 @@
 [code]
-	editor = nvim --nofork
+	editor = nvim
 [core]
 	autocrlf = true

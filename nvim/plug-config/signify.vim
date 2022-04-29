@@ -20,7 +20,7 @@ nmap <leader>gh :SignifyToggleHighlight<cr>
 "mappin git
 nmap <leader>gs :Git status<cr>
 nmap <leader>ga :Git add
-nmap <leader>gc :Git commit -a
+nmap <leader>gc :Git commit -a<cr>
 nmap <leader>gp :Git push origin
 nmap <leader>gf :Gdiffsplit<cr>
 nmap <leader>gb :Git blame<cr>
