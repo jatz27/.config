@@ -62,7 +62,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'gregsexton/matchtag'
     
     "Plugins para debug
-    Plug 'puremourning/vimspector'
+    " Plug 'puremourning/vimspector'
     " Maximisa ventanas
     Plug 'szw/vim-maximizer'
     

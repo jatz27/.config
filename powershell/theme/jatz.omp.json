@@ -34,70 +34,68 @@
         {
           "background": "#FD6D91",
           "foreground": "#003642",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "\ue0b0 ",
           "style": "powerline",
-          "template": "<#0077c2,transparent></> \uf489 {{ .Name }} <transparent,#0077c2></>",
+          "template": "<#0077c2,transparent></>\uf489 {{ .Name }} <transparent,#0077c2></>",
           "type": "shell"
         },
         {
           "background": "#BA8A00",
           "foreground": "#003642",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "\ue0b0 ",
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
           "style": "powerline",
-          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "template": "{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end}} ",
           "type": "git"
         },
         {
-          "background": "#6CA35E",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "background": "#306998",
+          "foreground": "#d5ad42",
+          "powerline_symbol": "\ue0b0 ",
           "style": "powerline",
-          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "python",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+        },
+        {
+          "background": "#6CA35E",
+          "foreground": "#303030",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0 ",
+          "template": "\ue718 {{if .PackageManagerIcon }}{{.PackageManagerIcon}} {{ end }}{{ .Full}} ",
           "type": "node"
         },
         {
           "type": "npm",
           "style": "powerline",
-          "powerline_symbol": "\uE0B0",
+          "powerline_symbol": "\ue0b0 ",
           "foreground": "#ffffff",
           "background": "#cc3838",
           "template": "\ue71e {{ .Full }} "
         },
-        {
-          "type": "python",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#100e23",
-          "background": "fffb38",
-          "properties": {
-            "prefix": " \uE235 "
-          }
-        },
-        {
+       {
           "background": "#E13154",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "\ue0b0 ",
           "style": "powerline",
-          "template": " \ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "template": "\ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
           "type": "java"
         },
         {
           "background": "#06A4CE",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "\ue0b0 ",
           "style": "powerline",
-          "template": " \ue798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "template": "\ue798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
           "type": "dart"
         },
         {
           "background": "#1BD760",
           "foreground": "#003642",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "\ue0b0 ",
           "properties": {
             "paused_icon": "\uf8e3 ",
             "playing_icon": "\ue602 ",

@@ -85,8 +85,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <A-f>  <Plug>(coc-format-selected)
-nmap <A-f>  <Plug>(coc-format-selected)
+xmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -165,7 +165,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "Instalacion automatica de extensiones
-let g:coc_global_extensions=['coc-explorer' ,'coc-powershell']
+let g:coc_global_extensions=['coc-explorer', 'coc-powershell', 'coc-pyright', 'coc-json', 'coc-vimlsp', 'coc-tsserver', 'coc-sql']
 
 " Explorer
 let g:coc_explorer_global_presets = {

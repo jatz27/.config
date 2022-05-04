@@ -11,5 +11,5 @@ source $HOME/.config/nvim/plug-config/easymotion.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
-source $HOME/.config/nvim/inspector/vimspector.vim
+" source $HOME/.config/nvim/inspector/vimspector.vim
 source $HOME/.config/nvim/plug-config/minimap.vim
