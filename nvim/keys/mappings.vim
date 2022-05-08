@@ -60,3 +60,8 @@ nmap <A-m> :MaximizerToggle<CR>
 
 " Desahacer
 nmap <C-z> u
+
+" Ejecutar python
+nmap <A-p><A-y> : !python %<CR>
+" Ejecutar node
+nmap <A-n><A-d> : !node %<CR>

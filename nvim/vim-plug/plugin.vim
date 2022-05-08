@@ -69,4 +69,8 @@ call plug#begin('~/.vim/plugged')
     " MiniMap resusmen de codigo en lateral derecho
     Plug 'wfxr/minimap.vim'
 
+    " Bases de datos
+    Plug 'tpope/vim-dadbod'
+    Plug 'kristijanhusak/vim-dadbod-ui'
+
   call plug#end()

@@ -165,7 +165,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "Instalacion automatica de extensiones
-let g:coc_global_extensions=['coc-explorer', 'coc-powershell', 'coc-pyright', 'coc-json', 'coc-vimlsp', 'coc-tsserver', 'coc-sql']
+let g:coc_global_extensions=['coc-explorer', 'coc-powershell', 'coc-pyright', 'coc-json', 'coc-vimlsp', 'coc-tsserver', 'coc-sql', 'coc-html-css-support']
 
 " Explorer
 let g:coc_explorer_global_presets = {
