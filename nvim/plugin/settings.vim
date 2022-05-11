@@ -7,7 +7,6 @@ set wrap                                " La linea de corta en el borde de la ve
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler              			            " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
@@ -33,3 +32,5 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set linebreak nolist                    " Al cortar la linea no lo hace enmedio de una palabra
+set ruler              			            " Show the cursor position all the time
+set cursorcolumn                        " Enable highlighting of the current column
