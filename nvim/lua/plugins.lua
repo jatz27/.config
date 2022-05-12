@@ -65,7 +65,8 @@ return packer.startup(function(use)
 
   --Terminal toggle
   use "voldikss/vim-floaterm"
-  use "akinsho/toggleterm.nvim"
+  -- Maximisa ventanas
+  use "szw/vim-maximizer"
 
   --if PACKER_BOOTSTRAP then
     --require("packer").sync()

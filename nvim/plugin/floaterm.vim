@@ -12,6 +12,7 @@ let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
 
 nnoremap <Leader>t :FloatermNew pwsh <CR>
+nnoremap <Leader>tg :FloatermNew lazygit <CR>
 
 tmap <esc> <c-\><c-n>
 nnoremap <c-t> :split<CR>:ter pwsh<CR>:resize 15<CR>:set nonu nornu<CR>

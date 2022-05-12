@@ -7,7 +7,7 @@ vim.g.mapleader = ' '
 -- Salir y guardar
 mapper("n", "w", ":w<CR>")
 mapper("n", "q", ":q<CR>")
-mapper("n", "<leader>q", ":q!<CR>")
+mapper("n", "<A-q>", ":q!<CR>")
 
 -- Eliminar un buffer
 mapper("n", "<leader>bd", ":bd<CR>")
@@ -50,3 +50,8 @@ mapper("n", "<C-z>", "u")
 -- Indentar desde modo visual
 mapper("v", "<", "<gv")
 mapper("v", ">", ">gv")
+
+-- Maximisar ventanas 
+mapper("n", "<A-m>", ":MaximizerToggle<CR>")
+
+
