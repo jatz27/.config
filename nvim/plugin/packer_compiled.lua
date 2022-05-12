@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\julio\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\julio\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "C:\\Users\\julio\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\julio\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "C:\\Users\\julio\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
   }
 }
 

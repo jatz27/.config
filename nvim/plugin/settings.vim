@@ -34,3 +34,4 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set linebreak nolist                    " Al cortar la linea no lo hace enmedio de una palabra
 set ruler              			            " Show the cursor position all the time
 set cursorcolumn                        " Enable highlighting of the current column
+

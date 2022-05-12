@@ -63,6 +63,10 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- Gestor para instalar servidores de lenguajes 
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 
+  --Terminal toggle
+  use "voldikss/vim-floaterm"
+  use "akinsho/toggleterm.nvim"
+
   --if PACKER_BOOTSTRAP then
     --require("packer").sync()
   --end
