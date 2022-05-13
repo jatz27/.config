@@ -10,7 +10,7 @@ mapper("n", "q", ":q<CR>")
 mapper("n", "<A-q>", ":q!<CR>")
 
 -- Eliminar un buffer
-mapper("n", "<leader>bd", ":bd<CR>")
+mapper("n", "<leader>dd", ":bd<CR>")
 
 -- dividir pantalla
 mapper("n", "<leader>dv", ":vsplit<CR>")
@@ -50,8 +50,16 @@ mapper("n", "<C-z>", "u")
 -- Indentar desde modo visual
 mapper("v", "<", "<gv")
 mapper("v", ">", ">gv")
+-- Mover texto arriba y abajo en modo visual
+mapper("v", "J", ":move '>+1<CR>gv-gv")
+mapper("v", "K", ":move '<-2<CR>gv-gv")
 
--- Maximisar ventanas 
+-- Maximisar ventanas
 mapper("n", "<A-m>", ":MaximizerToggle<CR>")
 
-
+-- Telescope
+mapper("n", "<leader>f", "<cmd>Telescope find_files<CR>")
+mapper("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
+mapper("n", "<leader>fgs", "<cmd>Telescope git_status<CR>")
+mapper("n", "<leader>fgc", "<cmd>Telescope git_commits<CR>")
+mapper("n", "<leader>fgb", "<cmd>Telescope git_branches<CR>")

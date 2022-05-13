@@ -40,11 +40,15 @@ packer.init {
 
 -- Instalacion de los plugins
 return packer.startup(function(use)
+
+  --Packer
   use "wbthomason/packer.nvim" -- Gestor de packer
 
+  -- themes and colorscheme
   use "vim-airline/vim-airline" -- Indicador de modos
   use "vim-airline/vim-airline-themes" -- Temas para el indicador de modos
   use "joshdick/onedark.vim" --Tema onedark
+  use "ryanoasis/vim-devicons" --Iconos
 
  -- cmp plugins
   use "hrsh7th/nvim-cmp" -- Plugion para complete lsp
@@ -59,14 +63,20 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- Activa LSP 
-  use "williamboman/nvim-lsp-installer" -- Gestor para instalar servidores de lenguajes 
+  use "neovim/nvim-lspconfig" -- Activa LSP
+  use "williamboman/nvim-lsp-installer" -- Gestor para instalar servidores de lenguajes
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 
   --Terminal toggle
   use "voldikss/vim-floaterm"
   -- Maximisa ventanas
   use "szw/vim-maximizer"
+
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+
 
   --if PACKER_BOOTSTRAP then
     --require("packer").sync()
