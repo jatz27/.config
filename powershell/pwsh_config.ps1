@@ -62,5 +62,3 @@ function which ($command) {
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-$env:VIRTUAL_ENV = $VenvDir
-$env:VIRTUAL_ENV_DISABLE_PROMPT = 1

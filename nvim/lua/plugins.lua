@@ -85,6 +85,8 @@ return packer.startup(function(use)
    }
   use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-autopairs" -- Autopairs, integrado con cmp y treesitter
+  use "numToStr/Comment.nvim" -- Comentarios
+  use 'JoosepAlviste/nvim-ts-context-commentstring' --Contexto de comentarios
 
   --if PACKER_BOOTSTRAP then
     --require("packer").sync()
