@@ -63,3 +63,11 @@ mapper("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
 mapper("n", "<leader>fgs", "<cmd>Telescope git_status<CR>")
 mapper("n", "<leader>fgc", "<cmd>Telescope git_commits<CR>")
 mapper("n", "<leader>fgb", "<cmd>Telescope git_branches<CR>")
+
+-- Terminal
+mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
+--mapper("t", "<C-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
+mapper("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>")
+mapper("t", "<C-g>", "<c\\><cmd>lua _LAZYGIT_TOGGLE()<CR>")
+mapper("n", "<A-s>", "<cmd>lua _LIVE_TOGGLE()<CR>")
+mapper("t", "<A-s>", "<c\\><cmd>lua _LIVE_TOGGLE()<CR>")

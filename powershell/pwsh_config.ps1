@@ -35,7 +35,7 @@ Set-Alias pcstop Stop-Computer
 Set-Alias pcreset Restart-Computer
 Set-Alias touch New-Item
 Set-Alias g git
-Set-Alias py python
+#Set-Alias py python
 function a {
 	cd A:
 }

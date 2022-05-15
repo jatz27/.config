@@ -68,7 +68,8 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 
   --Terminal toggle
-  use "voldikss/vim-floaterm"
+  use "akinsho/toggleterm.nvim"
+--  use "voldikss/vim-floaterm"
   -- Maximisa ventanas
   use "szw/vim-maximizer"
 
@@ -77,6 +78,13 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
 
+  -- Treesitter
+  use {
+     "nvim-treesitter/nvim-treesitter",
+     run = ":TSUpdate",
+   }
+  use "p00f/nvim-ts-rainbow"
+  use "windwp/nvim-autopairs" -- Autopairs, integrado con cmp y treesitter
 
   --if PACKER_BOOTSTRAP then
     --require("packer").sync()
