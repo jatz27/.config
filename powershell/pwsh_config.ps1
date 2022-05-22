@@ -1,6 +1,7 @@
 # Oh my posh
 Import-Module posh-git
-Import-Module oh-my-posh
+oh-my-posh init pwsh | Invoke-Expression
+
 # Theme
 $omp_config = Join-Path $PSScriptRoot ".\theme\jatz.omp.json"
 oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
@@ -25,8 +26,8 @@ Set-PSReadLineOption -EditMode Windows
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 # Fzf
-Import-Module PSFzf
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+#Import-Module PSFzf
+#Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Alias
 Set-Alias vim nvim

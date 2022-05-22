@@ -8,7 +8,7 @@ echo '. $env:USERPROFILE\.config\powershell\pwsh_config.ps1' > $HOME\Documents\P
 
 # Instalacion de modulos de powershell
 Install-Module posh-git -Scope CurrentUser -Force
-Install-Module oh-my-posh -Scope CurrentUser -Force
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
 Install-Module -Name z -Force
 Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
