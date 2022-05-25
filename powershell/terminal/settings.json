@@ -69,7 +69,7 @@
                 "name": "PwSh",
                 "source": "Windows.Terminal.PowershellCore",
                // "opacity": 95,
-               // "useAcrylic": true
+                "useAcrylic": true
             }
         ]
     },
