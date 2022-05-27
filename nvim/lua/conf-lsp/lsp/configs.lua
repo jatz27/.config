@@ -15,7 +15,7 @@ local servers = { "jsonls",
                   "denols",
                   "emmet_ls",
                   "sqlls",
-                  -- "dartls",
+                  "dartls",
                   "powershell_es" }
 
 lsp_installer.setup {
