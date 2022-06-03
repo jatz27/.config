@@ -71,3 +71,9 @@ mapper("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>")
 mapper("t", "<C-g>", "<c\\><cmd>lua _LAZYGIT_TOGGLE()<CR>")
 mapper("n", "<A-s>", "<cmd>lua _LIVE_TOGGLE()<CR>")
 mapper("t", "<A-s>", "<c\\><cmd>lua _LIVE_TOGGLE()<CR>")
+
+-- Nvim-Tree
+-- Abrir nvim-tree
+mapper("n", "<A-n>", ":NvimTreeToggle<CR>")
+-- refrescar nvim-tree
+mapper("n", "<leader>r", ":NvimTreeToggle<CR>")
