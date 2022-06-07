@@ -1,6 +1,6 @@
 local fn = vim.fn
 
--- Instalacion automatica de packer
+-- Automatically install packer
 local install_path = fn.stdpath "data" .. "$HOME/AppData/local/nvim-data/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
@@ -11,11 +11,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
     "https://github.com/wbthomason/packer.nvim",
     install_path,
   }
-  --print "Installing packer close and reopen Neovim..."
+ -- print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Al guardar este el archivo de plugins automatica se recarga
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -23,13 +23,13 @@ vim.cmd [[
   augroup end
 ]]
 
--- Use una llamada protegida para que no cometamos un error en el primer uso
+-- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
 
--- Hacer que packer tenga una ventana emergente
+-- Have packer use a popup window
 packer.init {
   display = {
     open_fn = function()
@@ -38,17 +38,20 @@ packer.init {
   },
 }
 
--- Instalacion de los plugins
+-- Install your plugins here
 return packer.startup(function(use)
 
-  --Packer
-  use "wbthomason/packer.nvim" -- Gestor de packer
+  -- Packer
+  use "wbthomason/packer.nvim" -- Restor de paquetes
 
   -- themes and colorscheme
-  use "vim-airline/vim-airline" -- Indicador de modos
-  use "vim-airline/vim-airline-themes" -- Temas para el indicador de modos
-  use "joshdick/onedark.vim" --Tema onedark
-  use "ryanoasis/vim-devicons" --Iconos
+  use 'navarasu/onedark.nvim' -- colorscheme onedark
+  use 'kyazdani42/nvim-web-devicons' --Iconos
+  -- Staline
+  use 'tamton-aquib/staline.nvim' -- Status Line
+  -- Bufferline
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
 
  -- cmp plugins
   use "hrsh7th/nvim-cmp" -- Plugion para complete lsp
@@ -67,6 +70,16 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- Gestor para instalar servidores de lenguajes
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 
+  -- Treesitter
+  use {
+     "nvim-treesitter/nvim-treesitter",
+     run = ":TSUpdate",
+   }
+  use "p00f/nvim-ts-rainbow"
+  use "windwp/nvim-autopairs" -- Autopairs, integrado con cmp y treesitter
+  use "numToStr/Comment.nvim" -- Comentarios
+  use 'JoosepAlviste/nvim-ts-context-commentstring' --Contexto de comentarios
+
   --Terminal toggle
   use "akinsho/toggleterm.nvim"
 --  use "voldikss/vim-floaterm"
@@ -78,24 +91,16 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
 
-  -- Treesitter
-  use {
-     "nvim-treesitter/nvim-treesitter",
-     run = ":TSUpdate",
-   }
-  use "p00f/nvim-ts-rainbow"
-  use "windwp/nvim-autopairs" -- Autopairs, integrado con cmp y treesitter
-  use "numToStr/Comment.nvim" -- Comentarios
-  use 'JoosepAlviste/nvim-ts-context-commentstring' --Contexto de comentarios
-
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "kdheepak/lazygit.nvim"
 
   -- Nvim Tree
-  use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
 
-  --if PACKER_BOOTSTRAP then
-    --require("packer").sync()
-  --end
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+--  if PACKER_BOOTSTRAP then
+  --  require("packer").sync()
+ -- end
 end)

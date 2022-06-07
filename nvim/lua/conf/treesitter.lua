@@ -5,7 +5,7 @@ end
 
 configs.setup {
   ensure_installed = {
-  "bash",
+  --"bash",
   "c",
   "javascript",
   "json",
@@ -19,7 +19,7 @@ configs.setup {
   "java",
   "yaml",
   "vim",
-  "dart",
+  "toml",
 }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "haskell" }, -- List of parsers to ignore installing

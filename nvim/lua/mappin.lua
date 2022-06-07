@@ -67,10 +67,10 @@ mapper("n", "<leader>fgb", "<cmd>Telescope git_branches<CR>")
 -- Terminal
 mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
 -- mapper("t", "<C-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
-mapper("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>")
-mapper("t", "<C-g>", "<c\\><cmd>lua _LAZYGIT_TOGGLE()<CR>")
 mapper("n", "<A-s>", "<cmd>lua _LIVE_TOGGLE()<CR>")
 mapper("t", "<A-s>", "<c\\><cmd>lua _LIVE_TOGGLE()<CR>")
+-- Lazygit
+mapper("n", "<leader>gg", ":LazyGit<CR>")
 
 -- Nvim-Tree
 -- Abrir nvim-tree

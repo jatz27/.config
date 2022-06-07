@@ -19,7 +19,7 @@ set smarttab                            " Makes tabbing smarter will realize you
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
-set laststatus=0                        " Always display the status line
+" set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set relativenumber                      " Line relativenumbers
 set cursorline                          " Enable highlighting of the current line
@@ -34,4 +34,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set linebreak nolist                    " Al cortar la linea no lo hace enmedio de una palabra
 set ruler              			            " Show the cursor position all the time
 set cursorcolumn                        " Enable highlighting of the current column
-
+set foldmethod=manual
+set noshowmode                          " Quita el --INSERT--
+" set termguicolors                       " Color de fuente y de los cursores de linea
+" let g:airline_powerline_fonts = 1
