@@ -1,7 +1,7 @@
 require "mappin"
 require "plugins"
 require "user.onedark"
-require "user.staline"
+require "user.lualine"
 require "user.bufferline"
 require "conf.cmp"
 require "conf.lsp"

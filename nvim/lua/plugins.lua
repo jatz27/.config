@@ -48,7 +48,7 @@ return packer.startup(function(use)
   use 'navarasu/onedark.nvim' -- colorscheme onedark
   use 'kyazdani42/nvim-web-devicons' --Iconos
   -- Staline
-  use 'tamton-aquib/staline.nvim' -- Status Line
+  use 'nvim-lualine/lualine.nvim' -- Status Line
   -- Bufferline
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"

@@ -15,6 +15,7 @@ local servers = { "jsonls",
                   "sqlls",
                   "taplo",
                   "yamlls",
+                  "rust_analyzer",
                   "powershell_es"
                   }
 
