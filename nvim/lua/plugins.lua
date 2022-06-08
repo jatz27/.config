@@ -98,6 +98,8 @@ return packer.startup(function(use)
   -- Nvim Tree
   use 'kyazdani42/nvim-tree.lua'
 
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 --  if PACKER_BOOTSTRAP then
