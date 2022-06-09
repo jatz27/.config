@@ -1,10 +1,15 @@
 # Oh my posh
-Import-Module posh-git
-oh-my-posh init pwsh | Invoke-Expression
+# Import-Module posh-git
+# oh-my-posh init pwsh | Invoke-Expression
 
 # Theme
-$omp_config = Join-Path $PSScriptRoot ".\theme\jatz.omp.json"
-oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+# $omp_config = Join-Path $PSScriptRoot ".\theme\jatz.omp.json"
+# oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+
+# Starship
+$ENV:STARSHIP_CONFIG = "$HOME\.config\powershell\starship\starship.toml"
+$ENV:STARSHIP_DISTRO = "  $env:username"
+Invoke-Expression (&starship init powershell)
 
 # Terminal Icons
 Import-Module -Name Terminal-Icons
@@ -20,14 +25,10 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 Set-PSReadLineOption -ShowToolTips
 Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle ListView
+# Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
 
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
-
-# Fzf
-#Import-Module PSFzf
-#Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Alias
 Set-Alias vim nvim
@@ -38,18 +39,18 @@ Set-Alias touch New-Item
 Set-Alias g git
 Set-Alias py python
 function a {
-	cd A:
+	Set-Location A:
 }
 function .. {
-	cd ..
+	Set-Location ..
 }
 function la {
-	ls -h -Force
+	Get-ChildItem -h -Force
 }
 
 # Java Jabba
 # Funcion para declarar version de java global (jabba-use jdk@1.8.255)
-function jabba-use ($command) {
+function jabba_use ($command) {
 	jabba use $command
 	$envRegKey = [Microsoft.Win32.Registry]::LocalMachine.OpenSubKey('SYSTEM\CurrentControlSet\Control\Session Manager\Environment', $true)
 	$envPath=$envRegKey.GetValue('Path', $null, "DoNotExpandEnvironmentNames").replace('%JAVA_HOME%\bin;', '')
