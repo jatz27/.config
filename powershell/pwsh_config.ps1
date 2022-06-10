@@ -58,7 +58,7 @@ function jabba_use ($command) {
 	[Environment]::SetEnvironmentVariable('PATH', "%JAVA_HOME%\bin;$envPath", 'Machine')
 }
 
-# Utilities
+# Utilities----
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
