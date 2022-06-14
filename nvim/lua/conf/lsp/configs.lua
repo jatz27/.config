@@ -5,7 +5,8 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls",
+local servers = { "bashls",
+                  "jsonls",
                   "sumneko_lua",
                   "tsserver",
                   "vimls",
@@ -16,7 +17,7 @@ local servers = { "jsonls",
                   "taplo",
                   "yamlls",
                   "rust_analyzer",
-                  "powershell_es"
+                  -- "powershell_es"
                   }
 
 lsp_installer.setup {
