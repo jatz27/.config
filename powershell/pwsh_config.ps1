@@ -8,11 +8,16 @@
 
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\powershell\starship\starship.toml"
-$ENV:STARSHIP_DISTRO = "  $env:username"
+$ENV:STARSHIP_DISTRO = " "
 Invoke-Expression (&starship init powershell)
 
 # Terminal Icons
 Import-Module -Name Terminal-Icons
+# Posh cd bash
+Import-Module -Name posh-cd
+function cd- {
+	 cd -
+}
 
 # PSReadLine
 # Shows navigable menu of all options when hitting Tab
@@ -23,10 +28,10 @@ Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
-Set-PSReadLineOption -ShowToolTips
+#Set-PSReadLineOption -ShowToolTips
 Set-PSReadLineOption -PredictionSource History
-# Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineOption -PredictionViewStyle ListView
+#Set-PSReadLineOption -EditMode Windows
 
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
@@ -64,3 +69,14 @@ function which ($command) {
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
+Set-PSReadLineKeyHandler -Chord Ctrl+o -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert('lf')
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
+
+Set-PSReadLineKeyHandler -Chord Alt+p -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert('. $HOME\OneDrive\Documentos\PowerShell\Microsoft.PowerShell_profile.ps1')
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
