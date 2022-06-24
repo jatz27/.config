@@ -14,7 +14,10 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # Prediccion con el histirial
 Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle ListView # La lista de comandos mientras se estan escribiendo
+Set-PSReadLineOption -PredictionViewStyle InlineView
+
+# Fzf
+Import-Module PSFzf
 
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\powershell\conf\starship.toml"

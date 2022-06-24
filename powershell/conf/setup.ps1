@@ -1,11 +1,3 @@
-# Modulos
-# Install-Module posh-git -Scope CurrentUser -Force
-# Install-Module oh-my-posh -Scope CurrentUser -Force
-# Install-Module -Name Terminal-Icons -Repository PSGallery -Force
-# Install-Module -Name z -Force
-# Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
-# Install-Module -Name PSFzf -Scope CurrentUser -Force
-
 # Copiar la confuguracion de windows terminal
 # cp $HOME\.config\powershell\terminal\settings.json $HOME\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 
