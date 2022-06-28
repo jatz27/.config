@@ -4,7 +4,16 @@ if not status_ok then
 end
 
 onedark.setup {
-  style = 'darker'
+  style = 'darker',
+  transparent = false,  -- Show/hide background
+  term_colors = true, -- Change terminal color as per the selected theme style
+  code_style = {
+          comments = 'none',
+          keywords = 'none',
+          functions = 'none',
+          strings = 'none',
+          variables = 'none'
+      },
   }
 
 onedark.load()

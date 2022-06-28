@@ -58,11 +58,11 @@ mapper("v", "K", ":move '<-2<CR>gv-gv")
 mapper("n", "<A-m>", ":MaximizerToggle<CR>")
 
 -- Telescope
-mapper("n", "<leader>f", "<cmd>Telescope find_files<CR>")
-mapper("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
-mapper("n", "<leader>fgs", "<cmd>Telescope git_status<CR>")
-mapper("n", "<leader>fgc", "<cmd>Telescope git_commits<CR>")
-mapper("n", "<leader>fgb", "<cmd>Telescope git_branches<CR>")
+mapper("n", "<A-f>", "<cmd>Telescope find_files<CR>")
+mapper("n", "<leader>th", "<cmd>Telescope help_tags<CR>")
+mapper("n", "<leader>tgs", "<cmd>Telescope git_status<CR>")
+mapper("n", "<leader>tgc", "<cmd>Telescope git_commits<CR>")
+mapper("n", "<leader>tgb", "<cmd>Telescope git_branches<CR>")
 
 -- Terminal
 mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
@@ -75,3 +75,6 @@ mapper("n", "<leader>gg", ":LazyGit<CR>")
 mapper("n", "<A-n>", ":NvimTreeToggle<CR>")
 -- refrescar nvim-tree
 mapper("n", "<leader>r", ":NvimTreeToggle<CR>")
+
+-- Formater codigo
+mapper("n", "<leader>f", ":Format<CR>")

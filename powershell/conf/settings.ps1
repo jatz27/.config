@@ -1,11 +1,11 @@
 # Terminal Icons
 Import-Module -Name Terminal-Icons
-# Posh cd bash
-Import-Module -Name posh-cd
+Import-Module posh-git
+Import-Module npm-completion
 
 # PSReadLine
 # Autocompletado con tab
-Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+# Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 # Navegar con las flechas en el auto completado
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
@@ -18,6 +18,8 @@ Set-PSReadLineOption -PredictionViewStyle InlineView
 
 # Fzf
 Import-Module PSFzf
+# Autocomplete tab con fzf
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\powershell\conf\starship.toml"
@@ -38,4 +40,10 @@ function jabba_use ($command) {
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
+
+# Autocomplete para chocolatey
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
 }

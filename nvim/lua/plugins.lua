@@ -11,7 +11,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     "https://github.com/wbthomason/packer.nvim",
     install_path,
   }
- -- print "Installing packer close and reopen Neovim..."
+  -- print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -53,7 +53,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
 
- -- cmp plugins
+  -- cmp plugins
   use "hrsh7th/nvim-cmp" -- Plugion para complete lsp
   use "hrsh7th/cmp-buffer" -- buffer complete
   use "hrsh7th/cmp-path" -- path complete
@@ -69,12 +69,13 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- Activa LSP
   use "williamboman/nvim-lsp-installer" -- Gestor para instalar servidores de lenguajes
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Treesitter
   use {
-     "nvim-treesitter/nvim-treesitter",
-     run = ":TSUpdate",
-   }
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
   use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-autopairs" -- Autopairs, integrado con cmp y treesitter
   use "numToStr/Comment.nvim" -- Comentarios
@@ -82,7 +83,7 @@ return packer.startup(function(use)
 
   --Terminal toggle
   use "akinsho/toggleterm.nvim"
---  use "voldikss/vim-floaterm"
+  --  use "voldikss/vim-floaterm"
   -- Maximisa ventanas
   use "szw/vim-maximizer"
 
@@ -97,12 +98,12 @@ return packer.startup(function(use)
 
   -- Nvim Tree
   use 'kyazdani42/nvim-tree.lua'
-
+  -- Las lineas de los espacios
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
---  if PACKER_BOOTSTRAP then
+  --  if PACKER_BOOTSTRAP then
   --  require("packer").sync()
- -- end
+  -- end
 end)

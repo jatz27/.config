@@ -15,6 +15,3 @@ function .. {
 function la {
 	Get-ChildItem -h -Force
 }
-function cdb {
-	 cd -
-}

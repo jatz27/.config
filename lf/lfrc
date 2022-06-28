@@ -1,7 +1,10 @@
 set hidden true
-set icons true
+set ignorecase true
+#set icons true
 
 cmd open $nvim.exe %f%
 map e $nvim.exe %f%
+map w $pwsh %f%
 
 map ga cd A:\\
+
