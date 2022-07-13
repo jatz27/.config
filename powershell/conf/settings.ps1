@@ -5,7 +5,7 @@ Import-Module npm-completion
 
 # PSReadLine
 # Autocompletado con tab
-# Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 # Navegar con las flechas en el auto completado
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
@@ -19,7 +19,7 @@ Set-PSReadLineOption -PredictionViewStyle InlineView
 # Fzf
 Import-Module PSFzf
 # Autocomplete tab con fzf
-Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+# Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\powershell\conf\starship.toml"
