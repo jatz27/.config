@@ -52,6 +52,8 @@ return packer.startup(function(use)
   -- Bufferline
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+  -- Alpha dashboard
+  use 'goolord/alpha-nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- Plugion para complete lsp
@@ -72,6 +74,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- Gestor para instalar servidores de lenguajes
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- Treesitter
   use {

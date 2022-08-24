@@ -63,6 +63,7 @@ mapper("n", "<leader>th", "<cmd>Telescope help_tags<CR>")
 mapper("n", "<leader>tgs", "<cmd>Telescope git_status<CR>")
 mapper("n", "<leader>tgc", "<cmd>Telescope git_commits<CR>")
 mapper("n", "<leader>tgb", "<cmd>Telescope git_branches<CR>")
+mapper("n", "<leader>tp", "<cmd>Telescope projects<CR>")
 
 -- Terminal
 mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
