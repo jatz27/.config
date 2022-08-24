@@ -43,7 +43,7 @@ return packer.startup(function(use)
 
   -- Packer
   use "wbthomason/packer.nvim" -- Restor de paquetes
-
+  use 'lewis6991/impatient.nvim' -- Optimization
   -- themes and colorscheme
   use 'navarasu/onedark.nvim' -- colorscheme onedark
   use 'kyazdani42/nvim-web-devicons' --Iconos
@@ -93,7 +93,7 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
-
+  use "ahmedkhalf/project.nvim" -- Proyect
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "kdheepak/lazygit.nvim"
