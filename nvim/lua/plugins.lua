@@ -60,6 +60,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline complete
   use "saadparwaiz1/cmp_luasnip" -- snippet complete lua
   use "hrsh7th/cmp-nvim-lsp"
+  -- Tabnine complete
+ 	-- use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='. ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -101,6 +103,8 @@ return packer.startup(function(use)
   -- Las lineas de los espacios
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- colorizer
+  use "norcalli/nvim-colorizer.lua"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   --  if PACKER_BOOTSTRAP then

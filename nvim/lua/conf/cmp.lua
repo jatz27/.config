@@ -53,7 +53,7 @@ cmp.setup {
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-a>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
@@ -103,6 +103,7 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
+        -- tabnine = "[TN]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -112,6 +113,7 @@ cmp.setup {
   sources = {
     { name = "nvim_lsp" },
     { name = "luasnip" },
+    -- { name = "cmp_tabnine" },
     { name = "buffer" },
     { name = "path" },
   },
@@ -120,7 +122,7 @@ cmp.setup {
     select = false,
   },
   --documentation = {
-    --border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  --border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
   --},
   experimental = {
     ghost_text = false,
