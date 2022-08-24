@@ -43,17 +43,19 @@ return packer.startup(function(use)
 
   -- Packer
   use "wbthomason/packer.nvim" -- Restor de paquetes
-  use 'lewis6991/impatient.nvim' -- Optimization
+  use "lewis6991/impatient.nvim" -- Optimization
   -- themes and colorscheme
-  use 'navarasu/onedark.nvim' -- colorscheme onedark
-  use 'kyazdani42/nvim-web-devicons' --Iconos
+  use "navarasu/onedark.nvim" -- colorscheme onedark
+  use "kyazdani42/nvim-web-devicons" --Iconos
   -- Staline
-  use 'nvim-lualine/lualine.nvim' -- Status Line
+  use "nvim-lualine/lualine.nvim" -- Status Line
   -- Bufferline
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   -- Alpha dashboard
-  use 'goolord/alpha-nvim'
+  use "goolord/alpha-nvim"
+  -- which-key
+  use "folke/which-key.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- Plugion para complete lsp
