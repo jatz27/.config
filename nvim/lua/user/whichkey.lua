@@ -80,6 +80,8 @@ local opts = {
 
 local mappings = {
   --[[ ["-"] = { "<cmd>lua require(\"Comment.api\").toggle_current_linewise()<CR>", "Comment" }, ]]
+  ["-"] = {"<Plug>(easymotion-overwin-w)", "Move to Word"},
+  ["_"] = {"<Plug>(easymotion-overwin-line)", "Move to Line"},
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -91,11 +93,11 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["m"] = {"<cmd>MaximizerToggle<CR>", "Maximizer Buffer"},
-  -- ["f"] = {
-  --   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-  --   "Find files",
-  -- },
-  ["f"] = {"<cmd>Telescope find_files<CR>", "Telescope"},
+   ["f"] = {
+     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+     "Find files",
+   },
+  --[[ ["f"] = {"<cmd>Telescope find_files<CR>", "Telescope"}, ]]
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
@@ -189,7 +191,13 @@ local mappings = {
     name = "Splite",
     v = {"<cmd>vsplit<CR>", "Vertical" },
     h = {"<cmd>split<CR>", "Horizontal" }
-  }
+  },
+
+  --[[ m = { ]]
+  --[[   name = "EasyMotion", ]]
+  --[[   l = {"<Plug>(easymotion-overwin-line)", "Motion Line"}, ]]
+  --[[   w = {"<Plug>(easymotion-overwin-w)", "Motion Word"} ]]
+  --[[ } ]]
 }
 
 local vopts = {

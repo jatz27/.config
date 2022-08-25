@@ -110,6 +110,9 @@ return packer.startup(function(use)
 
   -- colorizer
   use "norcalli/nvim-colorizer.lua"
+
+  --EazyMotion
+  use "easymotion/vim-easymotion"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   --  if PACKER_BOOTSTRAP then

@@ -59,6 +59,12 @@ mapper("v", "K", ":move '<-2<CR>gv-gv")
 
 -- Telescope
 mapper("n", "<A-f>", "<cmd>Telescope find_files<CR>")
+
+-- EasyMotion
+mapper("n", "s", "<Plug>(easymotion-overwin-f2)")
+mapper("n", "n", "<Plug>(easymotion-next)")
+mapper("n", "N", "<Plug>(easymotion-prev)")
+
 --[[ mapper("n", "<leader>th", "<cmd>Telescope help_tags<CR>") ]]
 --[[ mapper("n", "<leader>tgs", "<cmd>Telescope git_status<CR>") ]]
 --[[ mapper("n", "<leader>tgc", "<cmd>Telescope git_commits<CR>") ]]
