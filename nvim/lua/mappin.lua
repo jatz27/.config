@@ -1,5 +1,5 @@
 local mapper = function(mode, key, result)
-	vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
+  vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
 end
 
 vim.g.mapleader = ' '
@@ -10,11 +10,11 @@ mapper("n", "q", ":q<CR>")
 mapper("n", "<A-q>", ":q!<CR>")
 
 -- Eliminar un buffer
-mapper("n", "<leader>dd", ":bd<CR>")
+--[[ mapper("n", "<leader>dd", ":bd<CR>") ]]
 
 -- dividir pantalla
-mapper("n", "<leader>dv", ":vsplit<CR>")
-mapper("n", "<leader>dh", ":split<CR>")
+--[[ mapper("n", "<leader>dv", ":vsplit<CR>") ]]
+--[[ mapper("n", "<leader>dh", ":split<CR>") ]]
 
 -- TAB siguiente buffer
 mapper("n", "<S-l>", ":bnext<CR>")
@@ -55,27 +55,27 @@ mapper("v", "J", ":move '>+1<CR>gv-gv")
 mapper("v", "K", ":move '<-2<CR>gv-gv")
 
 -- Maximisar ventanas
-mapper("n", "<A-m>", ":MaximizerToggle<CR>")
+--[[ mapper("n", "<A-m>", ":MaximizerToggle<CR>") ]]
 
 -- Telescope
 mapper("n", "<A-f>", "<cmd>Telescope find_files<CR>")
-mapper("n", "<leader>th", "<cmd>Telescope help_tags<CR>")
-mapper("n", "<leader>tgs", "<cmd>Telescope git_status<CR>")
-mapper("n", "<leader>tgc", "<cmd>Telescope git_commits<CR>")
-mapper("n", "<leader>tgb", "<cmd>Telescope git_branches<CR>")
-mapper("n", "<leader>tp", "<cmd>Telescope projects<CR>")
+--[[ mapper("n", "<leader>th", "<cmd>Telescope help_tags<CR>") ]]
+--[[ mapper("n", "<leader>tgs", "<cmd>Telescope git_status<CR>") ]]
+--[[ mapper("n", "<leader>tgc", "<cmd>Telescope git_commits<CR>") ]]
+--[[ mapper("n", "<leader>tgb", "<cmd>Telescope git_branches<CR>") ]]
+--[[ mapper("n", "<leader>tp", "<cmd>Telescope projects<CR>") ]]
 
 -- Terminal
-mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
+--[[ mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>") ]]
 -- mapper("t", "<C-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
 -- Lazygit
-mapper("n", "<leader>gg", ":LazyGit<CR>")
+--[[ mapper("n", "<leader>gg", ":LazyGit<CR>") ]]
 
 -- Nvim-Tree
 -- Abrir nvim-tree
-mapper("n", "<A-n>", ":NvimTreeToggle<CR>")
+--[[ mapper("n", "<A-n>", ":NvimTreeToggle<CR>") ]]
 -- refrescar nvim-tree
-mapper("n", "<leader>r", ":NvimTreeToggle<CR>")
+--[[ mapper("n", "<leader>r", ":NvimTreeToggle<CR>") ]]
 
 -- Formater codigo
-mapper("n", "<leader>f", ":Format<CR>")
+--[[ mapper("n", "<leader>f", ":Format<CR>") ]]

@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-  ["-"] = { "<cmd>lua require(\"Comment.api\").toggle_current_linewise()<CR>", "Comment" },
+  --[[ ["-"] = { "<cmd>lua require(\"Comment.api\").toggle_current_linewise()<CR>", "Comment" }, ]]
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -90,10 +90,12 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["m"] = {"<cmd>MaximizerToggle<CR>", "Maximizer Buffer"},
   -- ["f"] = {
   --   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   --   "Find files",
   -- },
+  ["f"] = {"<cmd>Telescope find_files<CR>", "Telescope"},
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
 
@@ -175,13 +177,19 @@ local mappings = {
   t = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+    --[[ u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" }, ]]
+    t = { "<cmd>lua _PWSH_TOGGLE()<cr>", "PowerShell" },
     p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+    --[[ f = { "<cmd>ToggleTerm direction=float<cr>", "Float" }, ]]
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  d = {
+    name = "Splite",
+    v = {"<cmd>vsplit<CR>", "Vertical" },
+    h = {"<cmd>split<CR>", "Horizontal" }
+  }
 }
 
 local vopts = {
@@ -193,7 +201,7 @@ local vopts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 local vmappings = {
-  ["/"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" },
+  --[[ ["-"] = { "<ESC><CMD>lua require(\"Comment.api\").toggle_linewise_op(vim.fn.visualmode())<CR>", "Comment" }, ]]
 }
 
 which_key.setup(setup)
