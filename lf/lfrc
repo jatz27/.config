@@ -7,4 +7,3 @@ map e $nvim.exe %f%
 map w $pwsh %f%
 
 map ga cd A:\\
-

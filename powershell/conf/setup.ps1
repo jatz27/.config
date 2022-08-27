@@ -35,3 +35,7 @@ git config --system user.name $name
 Write-Output "Ingrese email para git: " 
 $email = Read-Host
 git config --system user.email $email
+
+# Configuracion de lf
+# Symbolic link para la confuguracion de lf dentro de la capeta appdata\local\lf\lfrc
+New-Item -ItemType SymbolicLink -Path $HOME\AppData\Local\lf\lfrc -Value $HOME\.config\lf\lfrc
