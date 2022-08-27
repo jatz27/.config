@@ -16,6 +16,7 @@ Install-Module -Name PSFzf -Scope CurrentUser -Force
 
 # Instalacion de manejadores de versiones
 # Jabba
+# comprobar en github jabba si sigue siento el mismo comando para instalar
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-Expression (
   Invoke-WebRequest https://github.com/shyiko/jabba/raw/master/install.ps1 -UseBasicParsing
@@ -35,6 +36,10 @@ git config --system user.name $name
 Write-Output "Ingrese email para git: " 
 $email = Read-Host
 git config --system user.email $email
+
+#NeoVim
+#Symbolic para la configuracion de Nvim
+New-Item -ItemType SymbolicLink -Path $HOME\AppData\Local\nvim -Value $HOME\.config\nvim
 
 # Configuracion de lf
 # Symbolic link para la confuguracion de lf dentro de la capeta appdata\local\lf\lfrc
