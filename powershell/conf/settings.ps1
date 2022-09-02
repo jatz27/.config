@@ -1,7 +1,7 @@
 # Terminal Icons
 Import-Module -Name Terminal-Icons
 Import-Module posh-git
-Import-Module npm-completion
+# Import-Module npm-completion
 
 # PSReadLine
 # Autocompletado con tab
