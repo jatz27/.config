@@ -13,7 +13,7 @@ local servers = { "jsonls",
                   "cssmodules_ls",
                   "emmet_ls",
                   "sqlls",
-                  "taplo",
+                  --[[ "taplo", ]]
                   "yamlls",
                   "rust_analyzer",
                   "powershell_es",

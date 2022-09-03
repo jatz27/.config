@@ -15,6 +15,14 @@ Set-PSReadLineKeyHandler -Chord Alt+p -ScriptBlock {
 # ver todos los archivos ctrl+t
 # ver el historial ctrl+r
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+
+# view fzf file with bat preview
+Set-PSReadLineKeyHandler -Chord Alt+f -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("fzf --preview 'bat {}'")
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
+
 # Cargar la configuracion de powershell alt+p
 Set-PSReadLineKeyHandler -Chord Alt+g -ScriptBlock {
     [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()

@@ -61,7 +61,7 @@ trim_at = "."
 disabled = false
 
 [directory]
-# truncation_length = 3
+truncation_length = 1
 # truncation_symbol = "…/"
 style = "bold bg:#f43154 fg:#ffffff"
 home_symbol = " ~"

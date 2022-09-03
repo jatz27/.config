@@ -1,6 +1,6 @@
 set hidden true
 set ignorecase true
-#set icons true
+# set icons
 
 # open nvim with lf
 cmd open $nvim.exe %f%
@@ -11,7 +11,7 @@ map w $pwsh %f%
 map ga cd A:\\
 
 # commands of copy, paste, cut and delete
-map c copy %f%
+map y copy %f%
 map p paste %f%
-map x cut %f%
-map d delete %f%
+map d cut %f%
+map x delete %f%
