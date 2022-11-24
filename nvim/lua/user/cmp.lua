@@ -45,6 +45,7 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -102,8 +103,8 @@ cmp.setup {
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
+        cmp_tabnine = "[TN]",
         luasnip = "[Snippet]",
-        -- tabnine = "[TN]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -112,8 +113,8 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp" },
+    { name = "cmp_tabnine" },
     { name = "luasnip" },
-    -- { name = "cmp_tabnine" },
     { name = "buffer" },
     { name = "path" },
   },
@@ -121,11 +122,20 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  --documentation = {
-  --border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  --},
+  --[[ documentation = { ]]
+  --[[ border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, ]]
+  --[[ }, ]]
   experimental = {
     ghost_text = false,
     native_menu = false,
   },
 }
+
+--[[ tabnine.setup({ ]]
+--[[   max_lines = 1000, ]]
+--[[   max_num_results = 20, ]]
+--[[   sort = true, ]]
+--[[   run_on_every_keystroke = true, ]]
+--[[   snippet_placeholder = '..', ]]
+--[[   show_prediction_strength = false ]]
+--[[ }) ]]

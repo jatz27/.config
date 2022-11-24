@@ -17,7 +17,7 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle InlineView
 
 # Fzf
-Import-Module PSFzf
+#Import-Module PSFzf
 # Autocomplete tab con fzf
 # Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 

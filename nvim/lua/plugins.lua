@@ -44,14 +44,18 @@ return packer.startup(function(use)
   -- Packer
   use "wbthomason/packer.nvim" -- Restor de paquetes
   use "lewis6991/impatient.nvim" -- Optimization
+
   -- themes and colorscheme
-  use "navarasu/onedark.nvim" -- colorscheme onedark
   use "kyazdani42/nvim-web-devicons" --Iconos
-  -- Staline
-  use "nvim-lualine/lualine.nvim" -- Status Line
+  use "navarasu/onedark.nvim" -- colorscheme onedark
+  use("EdenEast/nightfox.nvim") -- colorscheme nightfox
+
+  -- Status Line
+  use "nvim-lualine/lualine.nvim"
   -- Bufferline
   use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
+  use "moll/vim-bbye" -- close buffers
+
   -- Alpha dashboard
   use "goolord/alpha-nvim"
   -- which-key
@@ -64,19 +68,20 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline complete
   use "saadparwaiz1/cmp_luasnip" -- snippet complete lua
   use "hrsh7th/cmp-nvim-lsp"
+  use("hrsh7th/cmp-nvim-lua")
   -- Tabnine complete
- 	-- use {'tzachar/cmp-tabnine', after = "nvim-cmp", run='. ./install.ps1', requires = 'hrsh7th/nvim-cmp'}
+  use { 'tzachar/cmp-tabnine', after = "nvim-cmp", run = 'powershell ./install.ps1', requires = 'hrsh7th/nvim-cmp' }
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- Activa LSP
-  use "williamboman/nvim-lsp-installer" -- Gestor para instalar servidores de lenguajes
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  use("neovim/nvim-lspconfig") -- Enable LSP
+  use("williamboman/mason.nvim") -- simple to use language server installer
+  use("williamboman/mason-lspconfig.nvim")
+  use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+  use("RRethy/vim-illuminate")
 
   -- Treesitter
   use {

@@ -15,4 +15,16 @@ map y copy %f%
 map p paste %f%
 map d cut %f%
 map x delete %f%
-map <space> $$HOME/AppData/Local/Programs/QuickLook/QuickLook.exe
+# map <space> $$HOME/AppData/Local/Programs/QuickLook/QuickLook.exe
+
+# Functions utils */
+map af ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+map aa ${{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
