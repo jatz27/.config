@@ -1,0 +1,129 @@
+# config of alacritty $HOME\AppData\Roaming\alacritty\alacritty.yml
+env:
+  TERM: xterm-256color
+shell:
+  # program: "C:\\Windows\\system32\\cmd.exe"
+  program: "pwsh"
+    #working_directory: %USERPROFILE% #AddNameOfUser
+
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: Regular
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Italic
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold Italic
+  size: 12.0
+
+window:
+  position:
+    x: 340
+    y: 55
+
+  dimensions:
+    columns: 150
+    lines: 50
+
+  # padding:
+  #   x: 10
+  #   y: 10
+  # Startup Mode (changes require restart)
+  startup_mode: Windowed
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+
+  # Window decorations
+  #
+  # Available values:
+  # - full: borders and title bar
+  # - none: neither borders nor title bar
+  # - transparent: title bar, transparent background and title bar buttons
+  # - buttonless: title bar, transparent background, but no title bar buttons
+  decorations: full
+
+  # Window title
+  dynamic_title: false
+  title: Alacritty
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Beam
+
+# Colors Nightfox carbon
+colors:
+  # Default colors
+  primary:
+    background: "0x161616"
+    foreground: "0xf2f4f8"
+  # Normal colors
+  normal:
+    black: "0x282828"
+    red: "0xee5396"
+    green: "0x25be6a"
+    yellow: "0x08bdba"
+    blue: "0x78a9ff"
+    magenta: "0xbe95ff"
+    cyan: "0x33b1ff"
+    white: "0xdfdfe0"
+  # Bright colors
+  bright:
+    black: "0x484848"
+    red: "0xf16da6"
+    green: "0x46c880"
+    yellow: "0x2dc7c4"
+    blue: "0x8cb6ff"
+    magenta: "0xc8a5ff"
+    cyan: "0x52bdff"
+    white: "0xe4e4e5"
+  indexed_colors:
+    - { index: 16, color: "0x3ddbd9" }
+    - { index: 17, color: "0xff7eb6" }
+
+draw_bold_text_with_bright_colors: true
+
+live_config_reload: true
+
+key_bindings:
+  # - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: V, mods: Control, action: Paste }
+  # - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: C, mods: Control, action: Copy }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: Q, mods: Control, action: Quit }
+  - { key: Return, mods: Alt, action: ToggleFullscreen }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+
+mouse:
+  # Click settings
+  #
+  # The `double_click` and `triple_click` settings control the time
+  # alacritty should wait for accepting multiple clicks as one double
+  # or triple click.
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true

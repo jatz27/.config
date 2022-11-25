@@ -12,8 +12,8 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
   renderer = {
-  highlight_git = true,
-  root_folder_modifier = ":t",
+    highlight_git = true,
+    root_folder_modifier = ":t",
     icons = {
       show = {
         git = true,
@@ -21,9 +21,9 @@ nvim_tree.setup {
         file = true,
         folder_arrow = true,
       },
-      glyphs ={
-      default = "",
-      symlink = "",
+      glyphs = {
+        default = "",
+        symlink = "",
         git = {
           unstaged = "",
           staged = "S",
@@ -79,8 +79,8 @@ nvim_tree.setup {
     timeout = 500,
   },
   view = {
-    width = 30,
-    height = 30,
+    --[[ width = 30, ]]
+    --[[ height = 30, ]]
     hide_root_folder = false,
     side = "left",
     mappings = {
@@ -95,10 +95,10 @@ nvim_tree.setup {
     relativenumber = false,
   },
   actions = {
-  use_system_clipboard = true,
+    use_system_clipboard = true,
     open_file = {
       quit_on_open = false,
-      resize_window =true,
+      resize_window = true,
     },
   },
   sync_root_with_cwd = true,

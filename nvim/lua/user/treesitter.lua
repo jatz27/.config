@@ -5,27 +5,26 @@ end
 
 configs.setup {
   ensure_installed = {
-  --"bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "html",
-  "css",
-  "rust",
-  "java",
-  "yaml",
-  "vim",
-  "toml",
-}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    --"bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "html",
+    "css",
+    "rust",
+    "java",
+    "vim",
+    "toml",
+  }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "haskell" }, -- List of parsers to ignore installing
   autopairs = {
-		enable = true,
-	},
+    enable = true,
+  },
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "" }, -- list of language that will be disabled
