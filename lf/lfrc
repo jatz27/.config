@@ -13,9 +13,8 @@ map ga cd A:\\
 # commands of copy, paste, cut and delete
 map y copy %f%
 map p paste %f%
-map d cut %f%
-map x delete %f%
-# map <space> $$HOME/AppData/Local/Programs/QuickLook/QuickLook.exe
+map x cut %f%
+map DD delete %f%
 
 # Functions utils */
 map af ${{

@@ -23,9 +23,16 @@ Set-PSReadLineKeyHandler -Chord Alt+f -ScriptBlock {
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
 
-# Cargar la configuracion de powershell alt+p
+# Lazygit alt+g
 Set-PSReadLineKeyHandler -Chord Alt+g -ScriptBlock {
     [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert('lazygit')
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
+
+# Lazydocker alt+g
+Set-PSReadLineKeyHandler -Chord Alt+d -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert('lazydocker')
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
