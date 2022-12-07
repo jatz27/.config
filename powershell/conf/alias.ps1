@@ -1,5 +1,5 @@
 # Alias
-Set-Alias vim nvim
+Set-Alias v nvim
 Set-Alias cat bat
 Set-Alias pcstop Stop-Computer
 Set-Alias pcreset Restart-Computer

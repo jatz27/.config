@@ -3,7 +3,8 @@ env:
   TERM: xterm-256color
 shell:
   # program: "C:\\Windows\\system32\\cmd.exe"
-  program: "pwsh"
+  program:
+    "pwsh"
     #working_directory: %USERPROFILE% #AddNameOfUser
 
 font:
@@ -104,7 +105,7 @@ key_bindings:
   # - { key: C,        mods: Control|Shift, action: Copy             }
   - { key: C, mods: Control, action: Copy }
   - { key: N, mods: Command, action: SpawnNewInstance }
-  - { key: Q, mods: Control, action: Quit }
+  # - { key: Q, mods: Control, action: Quit }
   - { key: Return, mods: Alt, action: ToggleFullscreen }
   - { key: Plus, mods: Control, action: IncreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }

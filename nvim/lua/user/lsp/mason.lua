@@ -1,14 +1,14 @@
 local servers = {
-  --[[ "jsonls", ]]
+  "jsonls",
   "sumneko_lua",
-  --[[ "tsserver", ]]
+  "tsserver",
   --[[ "eslint", ]]
   --	"bashls",
   --	"vimls",
-  --[[ "pyright", ]]
+  "pyright",
   --	"yamlls",
   --[[ "cssmodules_ls", ]]
-  --[[ "emmet_ls", ]]
+  "emmet_ls",
   --[[ "sqls", ]]
   --[[ "taplo", ]]
   --[[ "rust_analyzer", ]]

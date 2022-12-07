@@ -118,6 +118,20 @@ return packer.startup(function(use)
 
   --EazyMotion
   use "easymotion/vim-easymotion"
+
+  --[[ Dadbod conexions databases  ]]
+  use({
+    "kristijanhusak/vim-dadbod-ui",
+    requires = {
+      "tpope/vim-dadbod",
+      "kristijanhusak/vim-dadbod-completion",
+      "tpope/vim-dotenv",
+    },
+  })
+
+  --[[ Plugin web tools ]]
+  use("ray-x/web-tools.nvim")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   --  if PACKER_BOOTSTRAP then

@@ -80,26 +80,27 @@ local opts = {
 
 local mappings = {
   --[[ ["-"] = { "<cmd>lua require(\"Comment.api\").toggle_current_linewise()<CR>", "Comment" }, ]]
-  ["-"] = {"<Plug>(easymotion-overwin-w)", "Move to Word"},
-  ["_"] = {"<Plug>(easymotion-overwin-line)", "Move to Line"},
+  ["|"] = { "<cmd>vsplit<CR>", "Vertical" },
+  ["_"] = { "<cmd>split<CR>", "Horizontal" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
+  --[[ ["w"] = { "<cmd>w!<CR>", "Save" }, ]]
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["m"] = {"<cmd>MaximizerToggle<CR>", "Maximizer Buffer"},
-   ["f"] = {
-     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-     "Find files",
-   },
-  --[[ ["f"] = {"<cmd>Telescope find_files<CR>", "Telescope"}, ]]
+  ["m"] = { "<cmd>MaximizerToggle<CR>", "Maximizer Buffer" },
+  ["f"] = {
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "Find files",
+  },
+  --[[ ["f"] = {"<cmd>Telescope find_files<CR>", "Telescope"}, ]] --[[ formatting ]]
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
+  ["D"] = { ":tab DBUI<cr>", "DatabaseUI" },
 
   p = {
     name = "Packer",
@@ -188,9 +189,14 @@ local mappings = {
   },
 
   d = {
-    name = "Splite",
-    v = {"<cmd>vsplit<CR>", "Vertical" },
-    h = {"<cmd>split<CR>", "Horizontal" }
+    name = "Debug",
+  },
+
+  w = {
+    name = "Web Live Server",
+    o = { "<cmd>BrowserOpen<cr>", "Open Server" },
+    r = { "<cmd>BrowserRestart<cr>", "Restart Server" },
+    s = { "<cmd>BrowserStop<cr>", "Stop Server" },
   },
 
   --[[ m = { ]]

@@ -21,6 +21,10 @@ mapper("n", "<S-l>", ":bnext<CR>")
 -- SHIFT-TAB previo buffer
 mapper("n", "<S-h>", ":bprevious<CR>")
 
+--[[ Move in tabs ]]
+mapper("n", "<TAB>", ":tabNext<CR>")
+mapper("n", "<TAB-q>", ":tabclose<CR>")
+
 -- Regresar a modo insertar con jk
 mapper("i", "jk", "<Esc>")
 mapper("i", "kj", "<Esc>")
@@ -72,7 +76,7 @@ mapper("n", "N", "<Plug>(easymotion-prev)")
 --[[ mapper("n", "<leader>tp", "<cmd>Telescope projects<CR>") ]]
 
 -- Terminal
---[[ mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>") ]]
+mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
 -- mapper("t", "<C-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
 -- Lazygit
 --[[ mapper("n", "<leader>gg", ":LazyGit<CR>") ]]
