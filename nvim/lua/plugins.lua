@@ -48,7 +48,11 @@ return packer.startup(function(use)
   -- themes and colorscheme
   use "kyazdani42/nvim-web-devicons" --Iconos
   use "navarasu/onedark.nvim" -- colorscheme onedark
-  use("EdenEast/nightfox.nvim") -- colorscheme nightfox
+  use "EdenEast/nightfox.nvim" -- colorscheme nightfox
+  use {
+    'uloco/bluloco.nvim',
+    requires = { 'rktjmp/lush.nvim' }
+  }
 
   -- Status Line
   use "nvim-lualine/lualine.nvim"
@@ -89,8 +93,9 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
-  use "windwp/nvim-autopairs" -- Autopairs, integrado con cmp y treesitter
-  use "numToStr/Comment.nvim" -- Comentarios
+  use "windwp/nvim-autopairs" -- Autopairs
+  use "windwp/nvim-ts-autotag" -- Autotags
+  use "numToStr/Comment.nvim" -- Comments
   use 'JoosepAlviste/nvim-ts-context-commentstring' --Contexto de comentarios
 
   --Terminal toggle
