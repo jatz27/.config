@@ -6,7 +6,7 @@ end
 
 bluloco.setup({
   style = "dark", -- "auto" | "dark" | "light" ]]
-  transparent = true,
+  transparent = false,
   italics = false,
   terminal = vim.fn.has("gui_running") == 1 -- bluloco colors are enabled in gui terminals per default.
 })

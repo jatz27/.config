@@ -6,3 +6,4 @@ end
 require "jatz.lsp.mason"
 require("jatz.lsp.handlers").setup()
 require "jatz.lsp.null-ls"
+require "jatz.lsp.lspsaga"

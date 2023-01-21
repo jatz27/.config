@@ -10,8 +10,8 @@ end
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn", "info" },
-	symbols = { error = " ", warn = " ", info = ' '},
+	sections = { "error", "warn" },
+	symbols = { error = " ", warn = " "},
 	colored = true,
 	update_in_insert = true,
 	always_visible = true,

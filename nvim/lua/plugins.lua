@@ -86,11 +86,12 @@ return packer.startup(function(use)
   use("williamboman/mason-lspconfig.nvim")
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
   use("RRethy/vim-illuminate")
+  use 'glepnir/lspsaga.nvim' -- LSP UIs
 
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
   use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-autopairs" -- Autopairs

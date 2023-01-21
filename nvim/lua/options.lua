@@ -39,6 +39,7 @@ local options = {
   list = true,
   ruler = true,
   cursorcolumn = true,
+  fillchars = "eob: ", -- remove ~ from the beginning of the line
 }
 
 for k, v in pairs(options) do

@@ -16,7 +16,7 @@ configs.setup {
     --[[ "html", ]]
     "css",
     "rust",
-    "java",
+    --[[ "java", ]]
     "vim",
     "toml",
   }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
