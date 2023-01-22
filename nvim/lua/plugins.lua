@@ -89,10 +89,11 @@ return packer.startup(function(use)
   use 'glepnir/lspsaga.nvim' -- LSP UIs
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  --[[ use { ]]
+  --[[   "nvim-treesitter/nvim-treesitter", ]]
+  --[[   run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, ]]
+  --[[ } ]]
   use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-autopairs" -- Autopairs
   use "windwp/nvim-ts-autotag" -- Autotags
