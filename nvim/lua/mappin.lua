@@ -76,8 +76,15 @@ mapper("n", "N", "<Plug>(easymotion-prev)")
 --[[ mapper("n", "<leader>tp", "<cmd>Telescope projects<CR>") ]]
 
 -- Terminal
-mapper("n", "<A-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
--- mapper("t", "<C-t>", "<cmd>lua _PWSH_TOGGLE()<CR>")
+mapper("n", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>")
+mapper("i", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>")
+mapper("t", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>")
+mapper("n", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>")
+mapper("i", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>")
+mapper("t", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>")
+mapper("n", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
+mapper("i", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
+mapper("t", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
 -- Lazygit
 --[[ mapper("n", "<leader>gg", ":LazyGit<CR>") ]]
 
