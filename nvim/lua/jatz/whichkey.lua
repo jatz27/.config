@@ -93,10 +93,10 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["m"] = { "<cmd>MaximizerToggle<CR>", "Maximizer Buffer" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
-  },
+  --[[ ["f"] = { ]]
+  --[[   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", ]]
+  --[[   "Find files", ]]
+  --[[ }, ]]
   --[[ ["f"] = {"<cmd>Telescope find_files<CR>", "Telescope"}, ]] --[[ formatting ]]
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
@@ -165,8 +165,8 @@ local mappings = {
     --[[   "Workspace Symbols", ]]
     --[[ }, ]]
   },
-  s = {
-    name = "Search",
+  f = {
+    name = "Find files",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
@@ -175,6 +175,10 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    f = {
+      "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+      "Find files",
+    },
   },
 
   t = {
@@ -190,6 +194,13 @@ local mappings = {
 
   d = {
     name = "Debug",
+  },
+
+  s = {
+    name = "Session manager",
+    s = { "<cmd>SSave<cr>", "Save Session" },
+    l = { "<cmd>SLoad<cr>", "Load Session" },
+    d = { "<cmd>SDelete<cr>", "Delete Session" },
   },
 
   w = {

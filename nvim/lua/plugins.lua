@@ -117,16 +117,19 @@ return packer.startup(function(use)
 
   -- Nvim Tree
   use 'kyazdani42/nvim-tree.lua'
-  -- Las lineas de los espacios
+  -- Indentation
   use "lukas-reineke/indent-blankline.nvim"
 
   -- colorizer
   use "norcalli/nvim-colorizer.lua"
 
+  --[[ Notify ]]
+  use "rcarriga/nvim-notify"
+
   --EazyMotion
   use "easymotion/vim-easymotion"
 
-  --[[ Dadbod conexions databases  ]]
+  --[[ Dadbod conexions databases and UI  ]]
   use({
     "kristijanhusak/vim-dadbod-ui",
     requires = {
@@ -135,6 +138,9 @@ return packer.startup(function(use)
       "tpope/vim-dotenv",
     },
   })
+
+  --[[ Session Manager ]]
+  use("mhinz/vim-startify")
 
   --[[ Plugin web tools ]]
   use("ray-x/web-tools.nvim")

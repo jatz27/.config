@@ -6,6 +6,7 @@ set ignorecase true
 cmd open $nvim.exe %f%
 map e $nvim.exe %f%
 map w $pwsh %f%
+map n $nvim.exe
 
 # go to partition
 map ga cd A:\\

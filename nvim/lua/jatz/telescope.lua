@@ -87,10 +87,22 @@ telescope.setup {
     -- builtin picker
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-  },
+    --[[ project = { ]]
+    --[[ base_dirs = { ]]
+    --[[   '~/dev/src', ]]
+    --[[   { '~/dev/src2' }, ]]
+    --[[   { '~/dev/src3', max_depth = 4 }, ]]
+    --[[   { path = '~/dev/src4' }, ]]
+    --[[   { path = '~/dev/src5', max_depth = 2 }, ]]
+    --[[ }, ]]
+    --[[     hidden_files = true, -- default: false ]]
+    --[[     theme = "dropdown", ]]
+    --[[     order_by = "asc", ]]
+    --[[     search_by = "title", ]]
+    --[[     sync_with_nvim_tree = true, -- default false ]]
+    --[[   } ]]
+  }
 }
+
+--[[ telescope.load_extension('project') ]]
+--[[ require 'telescope'.load_extension('project') ]]
