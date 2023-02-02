@@ -14,12 +14,12 @@ font:
   bold:
     family: "JetBrainsMono Nerd Font"
     style: Bold
-  italic:
-    family: "JetBrainsMono Nerd Font"
-    style: Italic
-  bold_italic:
-    family: "JetBrainsMono Nerd Font"
-    style: Bold Italic
+      #  italic:
+      #family: "JetBrainsMono Nerd Font"
+      #style: Italic
+      #bold_italic:
+      #family: "JetBrainsMono Nerd Font"
+      #style: Bold Italic
   size: 12.0
 
 window:

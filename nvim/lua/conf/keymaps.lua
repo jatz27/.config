@@ -1,8 +1,8 @@
 local mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
+	vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
 end
 
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Salir y guardar
 mapper("n", "w", ":w<CR>")
@@ -85,6 +85,7 @@ mapper("t", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>")
 mapper("n", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
 mapper("i", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
 mapper("t", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
+
 -- Lazygit
 --[[ mapper("n", "<leader>gg", ":LazyGit<CR>") ]]
 

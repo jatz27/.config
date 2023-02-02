@@ -2,6 +2,7 @@
 scoop
 nvim/plugin/packer_compiled.lua
 session
+nvim/lazy-lock.json
 
 # Archivos compilados de lua
 *.src.rock
