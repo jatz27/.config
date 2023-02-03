@@ -27,7 +27,7 @@ bufferline.setup({
 			local icon = level:match("error") and " " or " "
 			return " " .. icon .. count
 		end,
-		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+		offsets = { { filetype = "NvimTree", text = "", padding = 0 } },
 		--show_buffer_icons = true,
 		--show_buffer_close_icons = true,
 		--show_close_icon = true,
@@ -39,17 +39,13 @@ bufferline.setup({
 		--mode = "buffers",
 	},
 	highlights = {
-		--		offset_separator = {
-		--		fg = "#f75f5f",
-		--	bg = "#282c34",
-		--},
 		separator = {
 			fg = "#21232c",
 			bg = "#21232c",
 		},
-		--		separator_selected = {
-		--		fg = "#073642",
-		--},
+		separator_selected = {
+			fg = "#073642",
+		},
 		background = {
 			fg = "#657b83",
 			bg = "#21232c",

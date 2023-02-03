@@ -10,12 +10,9 @@ lspsaga.setup({
 		winblend = 0,
 		border = "rounded",
 		colors = {
-			--normal_bg = "#21232c",
-			normal_bg = "#2d333e",
+			--[[ normal_bg = "#21232c", ]]
+			normal_bg = "#282c34",
 		},
-	},
-	symbol_in_winbar = {
-		enable = true,
 	},
 })
 

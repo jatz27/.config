@@ -38,7 +38,7 @@ local options = {
 	whichwrap = "bs<>[]hl", -- which "horizontal" keys are allowed to travel to prev/next line
 	list = true,
 	ruler = true,
-	cursorcolumn = true,
+	--[[ cursorcolumn = true, ]]
 	fillchars = "eob: ", -- remove ~ from the beginning of the line
 }
 

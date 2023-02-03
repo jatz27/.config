@@ -62,7 +62,7 @@ mapper("v", "K", ":move '<-2<CR>gv-gv")
 --[[ mapper("n", "<A-m>", ":MaximizerToggle<CR>") ]]
 
 -- Telescope
-mapper("n", "<A-f>", "<cmd>Telescope find_files<CR>")
+--[[ mapper("n", "<A-f>", "<cmd>Telescope find_files<CR>") ]]
 
 -- EasyMotion
 mapper("n", "s", "<Plug>(easymotion-overwin-f2)")

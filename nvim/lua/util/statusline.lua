@@ -5,7 +5,7 @@ local one_monokai = {
 	green = "#98c379",
 	yellow = "#e5c07b",
 	purple = "#c678dd",
-	orange = "#da7b44",
+	orange = "#d19a66",
 	peanut = "#f6d5a4",
 	red = "#e06c75",
 	aqua = "#61afef",
@@ -47,39 +47,39 @@ local c = {
 	gitBranch = {
 		provider = "git_branch",
 		hl = {
-			fg = "peanut",
-			bg = "darkblue",
+			fg = "darkblue",
+			bg = "orange",
 			style = "bold",
 		},
-		left_sep = "block",
-		right_sep = "block",
+		left_sep = "",
+		right_sep = "",
 	},
 	gitDiffAdded = {
 		provider = "git_diff_added",
 		hl = {
 			fg = "green",
-			bg = "darkblue",
+			--[[ bg = "darkblue", ]]
 		},
-		left_sep = "block",
-		right_sep = "block",
+		--[[ left_sep = "block", ]]
+		--[[ right_sep = "block", ]]
 	},
 	gitDiffRemoved = {
 		provider = "git_diff_removed",
 		hl = {
 			fg = "red",
-			bg = "darkblue",
+			--[[ bg = "darkblue", ]]
 		},
-		left_sep = "block",
-		right_sep = "block",
+		--[[ left_sep = "block", ]]
+		--[[ right_sep = "block", ]]
 	},
 	gitDiffChanged = {
 		provider = "git_diff_changed",
 		hl = {
-			fg = "fg",
-			bg = "darkblue",
+			fg = "aqua",
+			--[[ bg = "darkblue", ]]
 		},
-		left_sep = "block",
-		right_sep = "right_filled",
+		--[[ left_sep = "block", ]]
+		--[[ right_sep = "right_filled", ]]
 	},
 	separator = {
 		provider = " ",
@@ -201,11 +201,11 @@ local c = {
 
 local left = {
 	c.vim_mode,
+	c.separator,
 	c.gitBranch,
 	c.gitDiffAdded,
 	c.gitDiffRemoved,
 	c.gitDiffChanged,
-	c.separator,
 }
 
 local middle = {
@@ -248,4 +248,26 @@ feline.setup({
 	components = components,
 	theme = one_monokai,
 	vi_mode_colors = vi_mode_colors,
+	force_inactive = {
+		filetypes = {
+			"packer",
+			"dap-repl",
+			"dapui_scopes",
+			"dapui_stacks",
+			"dapui_watches",
+			"dapui_repl",
+			"LspTrouble",
+			"qf",
+			"help",
+		},
+		buftypes = { "terminal" },
+		bufnames = {},
+	},
+	disable = {
+		filetypes = {
+			"NvimTree",
+			"dashboard",
+			"startify",
+		},
+	},
 })
