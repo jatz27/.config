@@ -40,6 +40,7 @@ local options = {
 	ruler = true,
 	--[[ cursorcolumn = true, ]]
 	fillchars = "eob: ", -- remove ~ from the beginning of the line
+	--[[ shell = "pwsh.exe", -- always terminal powershell pwsh ]]
 }
 
 for k, v in pairs(options) do

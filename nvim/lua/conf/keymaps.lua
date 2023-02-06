@@ -9,12 +9,9 @@ mapper("n", "w", ":w<CR>")
 mapper("n", "q", ":q<CR>")
 mapper("n", "<A-q>", ":q!<CR>")
 
--- Eliminar un buffer
---[[ mapper("n", "<leader>dd", ":bd<CR>") ]]
-
 -- dividir pantalla
---[[ mapper("n", "<leader>dv", ":vsplit<CR>") ]]
---[[ mapper("n", "<leader>dh", ":split<CR>") ]]
+mapper("n", "<M-|>", ":vsplit<CR>")
+mapper("n", "<M-_>", ":split<CR>")
 
 -- TAB siguiente buffer
 mapper("n", "<S-l>", ":bnext<CR>")
@@ -65,9 +62,9 @@ mapper("v", "K", ":move '<-2<CR>gv-gv")
 --[[ mapper("n", "<A-f>", "<cmd>Telescope find_files<CR>") ]]
 
 -- EasyMotion
-mapper("n", "s", "<Plug>(easymotion-overwin-f2)")
-mapper("n", "n", "<Plug>(easymotion-next)")
-mapper("n", "N", "<Plug>(easymotion-prev)")
+--[[ mapper("n", "s", "<Plug>(easymotion-overwin-f2)") ]]
+--[[ mapper("n", "n", "<Plug>(easymotion-next)") ]]
+--[[ mapper("n", "N", "<Plug>(easymotion-prev)") ]]
 
 --[[ mapper("n", "<leader>th", "<cmd>Telescope help_tags<CR>") ]]
 --[[ mapper("n", "<leader>tgs", "<cmd>Telescope git_status<CR>") ]]
@@ -76,15 +73,15 @@ mapper("n", "N", "<Plug>(easymotion-prev)")
 --[[ mapper("n", "<leader>tp", "<cmd>Telescope projects<CR>") ]]
 
 -- Terminal
-mapper("n", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>")
-mapper("i", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>")
-mapper("t", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>")
-mapper("n", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>")
-mapper("i", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>")
-mapper("t", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>")
-mapper("n", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
-mapper("i", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
-mapper("t", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>")
+--[[ mapper("n", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>") ]]
+--[[ mapper("i", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>") ]]
+--[[ mapper("t", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>") ]]
+--[[ mapper("n", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>") ]]
+--[[ mapper("i", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>") ]]
+--[[ mapper("t", "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<CR>") ]]
+--[[ mapper("n", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>") ]]
+--[[ mapper("i", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>") ]]
+--[[ mapper("t", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>") ]]
 
 -- Lazygit
 --[[ mapper("n", "<leader>gg", ":LazyGit<CR>") ]]

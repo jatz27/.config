@@ -74,6 +74,10 @@ bufferline.setup({
 			fg = "#e06c75",
 			bg = "#282c34",
 		},
+		modified_visible = {
+			fg = "#e06c75",
+			bg = "#282c34",
+		},
 		indicator_selected = {
 			fg = "#282c34",
 			bg = "#282c34",
