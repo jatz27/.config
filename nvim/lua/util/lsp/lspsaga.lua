@@ -15,7 +15,6 @@ lspsaga.setup({
 		},
 	},
 })
-
 --local mapp = { vim.keymap.set }
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)

@@ -3,26 +3,41 @@ if not status_ok then
 	return
 end
 
-local hide_in_width = function()
-	return vim.fn.winwidth(0) > 80
-end
+--[[ local hide_in_width = function() ]]
+--[[ 	return vim.fn.winwidth(0) > 80 ]]
+--[[ end ]]
 
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
-	symbols = { error = " ", warn = " " },
+	sections = { "error", "warn", "hint" },
+	symbols = {
+		error = " ",
+		warn = " ",
+		hint = " ",
+	},
 	colored = true,
+	diagnostics_color = {
+		error = { fg = "#e06c75" },
+		warn = { fg = "#d19a66" },
+		hint = { fg = "#61afef" },
+	},
 	update_in_insert = true,
 	always_visible = true,
 }
 
 local diff = {
 	"diff",
+	symbols = { added = " ", modified = "柳", removed = " " }, -- changes diff symbols
 	colored = true,
+	diff_color = {
+		added = { fg = "#98c379" },
+		modified = { fg = "#61afef" },
+		removed = { fg = "#e06c75" },
+	},
+	update_in_insert = true,
 	always_visible = true,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-	cond = hide_in_width,
+	--[[ cond = hide_in_width, ]]
 }
 
 --[[ local mode = { ]]
@@ -42,6 +57,7 @@ local branch = {
 	"branch",
 	icons_enabled = true,
 	icon = "",
+	color = { gui = "bold" },
 }
 
 --[[ local location = { ]]
@@ -53,7 +69,7 @@ local branch = {
 local progress_bar = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
-	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
+	local chars = { "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
 	local line_ratio = current_line / total_lines
 	local index = math.ceil(line_ratio * #chars)
 	return chars[index]
@@ -81,7 +97,7 @@ local lsp_client = {
 		return msg
 	end,
 	icon = " ",
-	color = { fg = "#a0a8b7", gui = "bold" },
+	color = { gui = "bold" },
 }
 
 lualine.setup({
@@ -103,7 +119,26 @@ lualine.setup({
 		lualine_b = { diagnostics, lsp_client },
 		lualine_c = {},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = {},
+		lualine_x = {
+			{
+				function()
+					return require("noice").api.status.mode.get()
+				end,
+				cond = function()
+					return package.loaded["noice"] and require("noice").api.status.mode.has()
+				end,
+				color = { fg = "#ff9364" },
+			},
+			{
+				function()
+					return require("noice").api.status.search.get()
+				end,
+				cond = function()
+					return package.loaded["noice"] and require("noice").api.status.search.has()
+				end,
+				color = { fg = "#ff9364" },
+			},
+		},
 		lualine_y = {
 			branch,
 			diff,
