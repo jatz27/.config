@@ -116,6 +116,7 @@ bufferline.setup({
 			italic = false,
 			bold = false,
 			bg = "#282c34",
+			fg = "#d19a66",
 		},
 		warning_diagnostic = {
 			italic = false,
@@ -127,7 +128,7 @@ bufferline.setup({
 			italic = false,
 			bold = false,
 			bg = "#282c34",
-			fg = "#61afef",
+			fg = "#d19a66",
 		},
 		hint = {
 			italic = false,

@@ -5,7 +5,7 @@ return {
 	keys = {
 		{ "<F1>", "<cmd>lua _PWSH_TOGGLE()<cr>", mode = { "n", "t" } },
 		{ "<F2>", "<cmd>lua _PWSH_TOGGLE_F2()<cr>", mode = "n", "t" },
-		{ "<leader>th", "<cmd>ToggleTerm size=12 direction=horizontal<cr>", mode = "n" },
+		{ "<F3>", "<cmd>lua _PWSH_TOGGLE_F3()<cr>", mode = "n", "t" },
 	},
 	config = function()
 		require("toggleterm").setup({
@@ -62,6 +62,15 @@ return {
 
 		function _PWSH_TOGGLE_F2()
 			pwsh_f2:toggle()
+		end
+
+		local pwsh_f3 = Terminal:new({ --[[ cmd = "pwsh", ]]
+			direction = "float",
+			hidden = true,
+		})
+
+		function _PWSH_TOGGLE_F3()
+			pwsh_f3:toggle()
 		end
 	end,
 }
