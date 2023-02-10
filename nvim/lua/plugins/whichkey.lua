@@ -84,7 +84,13 @@ return {
 		local mappings = {
 			--[[ ["|"] = { "<cmd>vsplit<CR>", "Vertical" }, ]]
 			["l"] = { "<cmd>Lazy<CR>", "Open Lazy" },
-
+			["D"] = { ":tab DBUI<cr>", "DatabaseUI" },
+			s = {
+				name = "Session manager",
+				s = { "<cmd>SSave<cr>", "Save Session" },
+				l = { "<cmd>SLoad<cr>", "Load Session" },
+				d = { "<cmd>SDelete<cr>", "Delete Session" },
+			},
 			w = {
 				name = "Web Live Server",
 				o = { "<cmd>BrowserOpen<cr>", "Open Server" },
