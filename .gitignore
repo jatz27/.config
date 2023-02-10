@@ -1,7 +1,7 @@
 # Ignorar
 scoop
 nvim/plugin/packer_compiled.lua
-session
+# session
 
 # Archivos compilados de lua
 *.src.rock

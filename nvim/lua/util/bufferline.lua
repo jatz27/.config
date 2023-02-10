@@ -20,7 +20,7 @@ bufferline.setup({
 		--right_trunc_marker = "",
 		max_name_length = 14,
 		max_prefix_length = 13, -- prefix used when a buffer is de-duplicated
-		tab_size = 15,
+		tab_size = 18,
 		diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
 		diagnostics_update_in_insert = true,
 		diagnostics_indicator = function(count, level)

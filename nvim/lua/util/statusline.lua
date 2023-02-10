@@ -6,7 +6,6 @@ end
 --[[ local hide_in_width = function() ]]
 --[[ 	return vim.fn.winwidth(0) > 80 ]]
 --[[ end ]]
-
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
@@ -46,7 +45,6 @@ local diff = {
 --[[ 		return str ]]
 --[[ 	end, ]]
 --[[ } ]]
-
 -- local filetype = {
 -- 	"filetype",
 -- 	icons_enabled = false,
@@ -64,7 +62,6 @@ local branch = {
 --[[ 	"location", ]]
 --[[ 	padding = 0, ]]
 --[[ } ]]
-
 -- cool function for progress
 local progress_bar = function()
 	local current_line = vim.fn.line(".")
@@ -109,7 +106,7 @@ lualine.setup({
 		section_separators = { left = "", right = "" },
 		-- component_separators = { left = "", right = "" },
 		-- section_separators = { left = "", right = "" },
-		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
+		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline", "dbui" },
 		always_divide_middle = true,
 	},
 	sections = {

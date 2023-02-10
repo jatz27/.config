@@ -7,6 +7,7 @@ cmd open $nvim.exe %f%
 map e $nvim.exe %f%
 map w $pwsh %f%
 map n $nvim.exe
+map gl $lazygit
 
 # go to partition
 map ga cd A:\\

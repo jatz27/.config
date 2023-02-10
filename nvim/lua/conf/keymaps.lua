@@ -7,7 +7,7 @@ vim.g.mapleader = " "
 -- Salir y guardar
 mapper("n", "w", ":w<CR>")
 mapper("n", "q", ":q<CR>")
-mapper("n", "<A-q>", ":q!<CR>")
+mapper("n", "<S-q>", ":q!<CR>")
 
 -- dividir pantalla
 mapper("n", "<M-|>", ":vsplit<CR>")
@@ -20,7 +20,8 @@ mapper("n", "<S-h>", ":bprevious<CR>")
 
 --[[ Move in tabs ]]
 mapper("n", "<TAB>", ":tabNext<CR>")
-mapper("n", "<TAB-q>", ":tabclose<CR>")
+mapper("n", "<S-TAB>", ":tabprivius<CR>")
+mapper("n", "<A-q>", ":tabclose<CR>")
 
 -- Regresar a modo insertar con jk
 mapper("i", "jk", "<Esc>")
@@ -57,21 +58,17 @@ mapper("v", "K", ":move '<-2<CR>gv-gv")
 
 -- Maximisar ventanas
 --[[ mapper("n", "<A-m>", ":MaximizerToggle<CR>") ]]
-
 -- Telescope
 --[[ mapper("n", "<A-f>", "<cmd>Telescope find_files<CR>") ]]
-
 -- EasyMotion
 --[[ mapper("n", "s", "<Plug>(easymotion-overwin-f2)") ]]
 --[[ mapper("n", "n", "<Plug>(easymotion-next)") ]]
 --[[ mapper("n", "N", "<Plug>(easymotion-prev)") ]]
-
 --[[ mapper("n", "<leader>th", "<cmd>Telescope help_tags<CR>") ]]
 --[[ mapper("n", "<leader>tgs", "<cmd>Telescope git_status<CR>") ]]
 --[[ mapper("n", "<leader>tgc", "<cmd>Telescope git_commits<CR>") ]]
 --[[ mapper("n", "<leader>tgb", "<cmd>Telescope git_branches<CR>") ]]
 --[[ mapper("n", "<leader>tp", "<cmd>Telescope projects<CR>") ]]
-
 -- Terminal
 --[[ mapper("n", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>") ]]
 --[[ mapper("i", "<F1>", "<cmd>lua _PWSH_TOGGLE()<CR>") ]]
@@ -82,15 +79,12 @@ mapper("v", "K", ":move '<-2<CR>gv-gv")
 --[[ mapper("n", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>") ]]
 --[[ mapper("i", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>") ]]
 --[[ mapper("t", "<F4>", "<cmd>lua _PWSH_TOGGLE_F4()<CR>") ]]
-
 -- Lazygit
 --[[ mapper("n", "<leader>gg", ":LazyGit<CR>") ]]
-
 -- Nvim-Tree
 -- Abrir nvim-tree
 --[[ mapper("n", "<A-n>", ":NvimTreeToggle<CR>") ]]
 -- refrescar nvim-tree
 --[[ mapper("n", "<leader>r", ":NvimTreeToggle<CR>") ]]
-
 -- Formater codigo
 --[[ mapper("n", "<leader>f", ":Format<CR>") ]]

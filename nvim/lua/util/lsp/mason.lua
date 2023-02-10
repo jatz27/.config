@@ -1,18 +1,18 @@
 local servers = {
-	--  "jsonls",
+	"jsonls",
 	"sumneko_lua",
-	--  "tsserver",
+	"tsserver",
+	"pyright",
+	"emmet_ls",
 	--[[ "eslint", ]]
-	--	"bashls",
-	--	"vimls",
-	--  "pyright",
-	--	"yamlls",
+	--[[ "bashls", ]]
+	--[[ "vimls", ]]
+	--[[ "yamlls", ]]
 	--[[ "cssmodules_ls", ]]
-	--  "emmet_ls",
 	--[[ "sqls", ]]
 	--[[ "taplo", ]]
 	--[[ "rust_analyzer", ]]
-	-- "powershell_es",
+	--[[ "powershell_es", ]]
 }
 
 local settings = {
