@@ -1,1 +1,0 @@
-require("jatz.theme.bluloco")
