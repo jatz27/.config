@@ -20,6 +20,7 @@ return {
 				"vim",
 				"toml",
 				"yaml",
+				"markdown",
 				--[[ "rust", ]]
 				--[[ "c", ]]
 				--[[ "bash", ]]
