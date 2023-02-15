@@ -1,11 +1,12 @@
+# set shell pwsh
 set hidden true
 set ignorecase true
-# set icons
+# set icons true
 
 # open nvim with lf
 cmd open $nvim.exe %f%
-map e $nvim.exe %f%
-map w $pwsh %f%
+# map e $nvim.exe %f%
+map <enter> $pwsh %f%
 map n $nvim.exe
 map gl $lazygit
 

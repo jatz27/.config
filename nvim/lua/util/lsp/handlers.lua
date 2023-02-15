@@ -53,7 +53,6 @@ M.setup = function()
 	--[[     vim.api.nvim_echo({ { msg } }, true, {}) ]]
 	--[[   end ]]
 	--[[ end ]]
-
 	-- Borders for LspInfo winodw
 	local win = require("lspconfig.ui.windows")
 	local _default_opts = win.default_opts
@@ -95,7 +94,6 @@ end
 --[[ keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts) ]]
 --[[ 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts) ]]
 --[[ end ]]
-
 --[[ M.on_attach = function(client, bufnr) ]]
 --[[ if client.name == "tsserver" then ]]
 --[[ 	client.server_capabilities.documentFormattingProvider = false ]]
@@ -104,13 +102,11 @@ end
 --[[ if client.name == "sumneko_lua" then ]]
 --[[ 	client.server_capabilities.documentFormattingProvider = false ]]
 --[[ end ]]
-
 --[[ 	lsp_keymaps(bufnr) ]]
---[[ 	local status_ok, illuminate = pcall(require, "illuminate") ]]
---[[ 	if not status_ok then ]]
---[[ 		return ]]
---[[ 	end ]]
+--[[ local status_ok, illuminate = pcall(require, "illuminate") ]]
+--[[ if not status_ok then ]]
+--[[ 	return ]]
+--[[ end ]]
 --[[ 	illuminate.on_attach(client) ]]
 --[[ end ]]
-
 return M
