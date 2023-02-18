@@ -7,11 +7,10 @@ lspsaga.setup({
 	ui = {
 		theme = "round",
 		title = true,
-		winblend = 0,
 		border = "rounded",
+		winblend = 0,
 		colors = {
-			--[[ normal_bg = "#21232c", ]]
-			normal_bg = "#282c34",
+			normal_bg = "#191c24",
 		},
 	},
 })

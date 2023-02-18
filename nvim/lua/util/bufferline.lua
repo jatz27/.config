@@ -5,19 +5,6 @@ end
 
 bufferline.setup({
 	options = {
-		--[[ numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string, ]]
-		--close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-		--right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-		--left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
-		--middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
-		--indicator = { style = "icon", icon = "" },
-		--[[ buffer_close_icon = "", ]]
-		--buffer_close_icon = "",
-		--modified_icon = "●",
-		--close_icon = "",
-		--[[ buffer_close_icon = "", ]]
-		--left_trunc_marker = "",
-		--right_trunc_marker = "",
 		max_name_length = 14,
 		max_prefix_length = 13, -- prefix used when a buffer is de-duplicated
 		tab_size = 18,
@@ -27,7 +14,7 @@ bufferline.setup({
 			local icon = level:match("error") and " " or level:match("warning") and " " or " "
 			return " " .. icon .. count
 		end,
-		offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "center", padding = 0 } },
+		offsets = { { filetype = "nvimtree", text = "file explorer", text_align = "center", padding = 0 } },
 		show_buffer_icons = true,
 		show_buffer_close_icons = true,
 		--show_close_icon = true,
@@ -56,7 +43,7 @@ bufferline.setup({
 			bold = false,
 		},
 		fill = {
-			bg = "#21232c",
+			bg = "#191c24",
 		},
 		close_button = {
 			fg = "#657b83",

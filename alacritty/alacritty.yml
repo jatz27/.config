@@ -14,12 +14,12 @@ font:
   bold:
     family: "JetBrainsMono Nerd Font"
     style: Bold
-      #  italic:
-      #family: "JetBrainsMono Nerd Font"
-      #style: Italic
-      #bold_italic:
-      #family: "JetBrainsMono Nerd Font"
-      #style: Bold Italic
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Italic
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold Italic
   size: 12.0
 
 window:
@@ -46,9 +46,7 @@ window:
   # Available values:
   # - full: borders and title bar
   # - none: neither borders nor title bar
-  # - transparent: title bar, transparent background and title bar buttons
-  # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: none
 
   # Window title
   dynamic_title: false
@@ -99,6 +97,32 @@ selection:
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
 
-import:
-  # - "C:\\Users\\julio\\.config\\alacritty\\onedark.yml"
-  - "C:\\Users\\julio\\.config\\alacritty\\latte.yml"
+    # theme Nordic https://github.com/AlexvZyl/nordic.nvim
+colors:
+  # Default colors
+  primary:
+    background: "0x242933"
+    foreground: "0xD8DEE9"
+  # Normal colors
+  normal:
+    black: "0x191C24"
+    red: "0xBF616A"
+    green: "0xA3BE8C"
+    yellow: "0xEBCB8B"
+    blue: "0x81A1C1"
+    magenta: "0xB48EAD"
+    cyan: "0x8FBCBB"
+    white: "0xD8DEE9"
+  # Bright colors
+  bright:
+    black: "0x526078"
+    red: "0xD06F79"
+    green: "0xB1D196"
+    yellow: "0xF0D399"
+    blue: "0x88C0D0"
+    magenta: "0xC895BF"
+    cyan: "0x93CCDC"
+    white: "0xE5E9F0"
+  indexed_colors:
+    - { index: 16, color: "0x3ddbd9" }
+    - { index: 17, color: "0xff7eb6" }
