@@ -5,6 +5,8 @@ local servers = {
 	"pyright",
 	"emmet_ls",
 	"marksman",
+	"html",
+	"cssls",
 	--[[ "eslint", ]]
 	--[[ "bashls", ]]
 	--[[ "vimls", ]]
