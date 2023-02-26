@@ -20,13 +20,12 @@ map x cut %f%
 map DD delete %f%
 
 # Functions utils */
-map af ${{
-  printf "Directory Name: "
-  read ans
-  mkdir $ans
+map ad ${{
+  $dir_name = Read-Host "Directory Name: "
+  New-Item $dir_name -ItemType Directory
 }}
-map aa ${{
-  printf "File Name: "
-  read ans
-  touch $ans
+
+map af ${{
+  $file_name = Read-Host "File Name: "
+  New-Item $file_name -ItemType File
 }}
