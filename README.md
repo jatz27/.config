@@ -1,2 +1,2 @@
 # Dotfiles
-My Dotfiles configuration
+My Dotfiles configuration for powershell
