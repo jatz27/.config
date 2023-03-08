@@ -1,23 +1,20 @@
-# set shell pwsh
+set shell pwsh
 set hidden true
 set ignorecase true
-# set icons true
+#set icons true
 
 # open nvim with lf
-cmd open $nvim.exe %f%
-# map e $nvim.exe %f%
-map <enter> $pwsh %f%
-map n $nvim.exe
+cmd open ${{nvim $Env:f.Replace('"','')}}
+map <enter> ${{pwsh $Env:f.Replace('"','')}}
+map n $nvim
 map gl $lazygit
+map su $su
 
 # go to partition
 map ga cd A:\\
 
 # commands of copy, paste, cut and delete
-map y copy %f%
-map p paste %f%
-map x cut %f%
-map DD delete %f%
+map XX delete $Env:f
 
 # Functions utils */
 map ad ${{

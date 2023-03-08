@@ -1,6 +1,7 @@
-# Ignorar
+# Ignore
 scoop
 nvim/plugin/packer_compiled.lua
+lf/history
 # session
 
 # Archivos compilados de lua
