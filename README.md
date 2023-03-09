@@ -4,7 +4,7 @@ Install with [scoop](https://scoop.sh/#/) or [chocolatey](https://chocolatey.org
 >**NOTE: Sccop create the directory .config and to clone repository we have to delete it**
 <br>
 ### Install
-[font JetBrainsMono](https://www.nerdfonts.com/font-downloads)\
+[font JetBrainsMono](https://www.nerdfonts.com/font-downloads)<br>
 [alacritty](https://alacritty.org/)\
 [powershell core](https://github.com/PowerShell/PowerShell/releases)\
 [starship](https://starship.rs/)\
