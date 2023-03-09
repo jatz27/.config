@@ -2,7 +2,6 @@
 My Dotfiles configuration for powershell\
 Install with [scoop](https://scoop.sh/#/) or [chocolatey](https://chocolatey.org/)<br>
 >**NOTE: Sccop create the directory .config and to clone repository we have to delete it**
-<br>
 
 ### Install
 [font JetBrainsMono](https://www.nerdfonts.com/font-downloads)<br>
