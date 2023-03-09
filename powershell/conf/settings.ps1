@@ -16,11 +16,6 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle InlineView
 
-# Fzf
-#Import-Module PSFzf
-# Autocomplete tab con fzf
-# Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
-
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\powershell\conf\starship.toml"
 $ENV:STARSHIP_DISTRO = " "
@@ -36,6 +31,7 @@ function jabba_use ($command) {
 	[Environment]::SetEnvironmentVariable('JAVA_HOME', "$(jabba which $(jabba current))", 'Machine')
 	[Environment]::SetEnvironmentVariable('PATH', "%JAVA_HOME%\bin;$envPath", 'Machine')
 }
+
 # Which saber las rutas de instalacion
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
@@ -58,12 +54,5 @@ function admin
     }
 }
 
-# Set UNIX-like aliases for the admin command, so sudo <command> will run the command
-# with elevated rights. 
-Set-Alias -Name su -Value admin
-
-# Autocomplete para chocolatey
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
-}
+# Declaration icons for LF
+$Env:LF_ICONS = ((Get-Content -Path ($Env:USERPROFILE + '\.config\lf\icons') -Encoding utf8) -replace '\s*#.*','' -replace '(?<File_Regex>[\S]+)\s+(?<Icon_String>\S)','${File_Regex}=${Icon_String}') | ?{$_ -ne ""} | Join-string -Separator ':'

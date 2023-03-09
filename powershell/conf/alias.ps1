@@ -15,3 +15,7 @@ function .. {
 function la {
 	Get-ChildItem -h -Force
 }
+
+# Set UNIX-like aliases for the admin command, so sudo <command> will run the command
+# with elevated rights. 
+Set-Alias -Name su -Value admin
