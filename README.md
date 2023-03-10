@@ -27,9 +27,13 @@ Install required PWSH modules
 Install-Module -Name Terminal-Icons -Repository PSGallery -Force
 Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 ``````````
-For PWSH has to refer to the configurable file 
+For PWSH has to reference to the configurable file ```$PROFILE```
 ``````````powershell
 nvim $PROFILE.CurrentUserCurrentHost
+``````````
+In file to open ```$PROFILE``` add line for configuration .config
+``````````powershell
+. $env:USERPROFILE\.config\powershell\pwsh_config.ps1
 ``````````
 > NOTE: This will tell PWSH that the configuration file is in .config
 ## LF
