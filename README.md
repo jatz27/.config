@@ -42,6 +42,7 @@ New-Item -ItemType SymbolicLink -Path $HOME\AppData\Local\lf -Value $HOME\.confi
 [node](https://nodejs.org/en/) or
 [nvm](https://github.com/coreybutler/nvm-windows)\
 [zig](https://scoop.sh/#/apps?q=zig&s=0&d=1&o=true)\
+[7zip](https://www.7-zip.org/)\
 [stylua](https://scoop.sh/#/apps?s=0&d=1&o=true&q=stylua)
 > NOTE: Execute como admin for create ``Symboliclink`` of config nvim
 ``````````powershell
