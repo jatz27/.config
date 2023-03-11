@@ -19,3 +19,12 @@ function la {
 # Set UNIX-like aliases for the admin command, so sudo <command> will run the command
 # with elevated rights. 
 Set-Alias -Name su -Value admin
+
+#Copy to clipboard pwd
+function cpd {
+  Get-Location | Set-Clipboard
+  }
+#Copy to clipboard pwd and move to directory
+function cpd ($command){
+    Set-Location $command && Get-Location | Set-Clipboard
+  }

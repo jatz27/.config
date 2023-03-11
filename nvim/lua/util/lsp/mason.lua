@@ -7,6 +7,7 @@ local servers = {
 	"marksman",
 	"html",
 	"cssls",
+	"powershell_es",
 	--[[ "eslint", ]]
 	--[[ "bashls", ]]
 	--[[ "vimls", ]]
@@ -15,7 +16,6 @@ local servers = {
 	--[[ "sqls", ]]
 	--[[ "taplo", ]]
 	--[[ "rust_analyzer", ]]
-	--[[ "powershell_es", ]]
 }
 
 local settings = {

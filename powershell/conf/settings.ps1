@@ -55,4 +55,4 @@ function admin
 }
 
 # Declaration icons for LF
-$Env:LF_ICONS = ((Get-Content -Path ($Env:USERPROFILE + '\.config\lf\icons') -Encoding utf8) -replace '\s*#.*','' -replace '(?<File_Regex>[\S]+)\s+(?<Icon_String>\S)','${File_Regex}=${Icon_String}') | ?{$_ -ne ""} | Join-string -Separator ':'
+$Env:LF_ICONS = ((Get-Content -Path ($Env:USERPROFILE + '\.config\lf\icons') -Encoding utf8) -replace '\s*#.*','' -replace '(Where-Object<File_Regex>[\S]+)\s+(Where-Object<Icon_String>\S)','${File_Regex}=${Icon_String}') | Where-Object{$_ -ne ""} | Join-string -Separator ':'
