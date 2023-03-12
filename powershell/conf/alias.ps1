@@ -21,10 +21,13 @@ function la {
 Set-Alias -Name su -Value admin
 
 #Copy to clipboard pwd
-function cpd {
+function cpdir ($command){
+  if($command -eq $undefineVariable){
   Get-Location | Set-Clipboard
-  }
-#Copy to clipboard pwd and move to directory
-function cpd ($command){
+    }
+    Else{
+    $dir_now= Get-Location
     Set-Location $command && Get-Location | Set-Clipboard
+    Set-Location $dir_now
+    }
   }
