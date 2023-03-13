@@ -26,3 +26,5 @@ map af ${{
   $file_name = Read-Host "File Name: "
   New-Item $file_name -ItemType File
 }}
+
+map P ${{C:\Users\julio\AppData\Local\Programs\QuickLook\QuickLook.exe $Env:f.Replace('"','')}}
