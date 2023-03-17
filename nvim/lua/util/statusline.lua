@@ -41,9 +41,7 @@ local diff = {
 
 --[[ local mode = { ]]
 --[[ 	"mode", ]]
---[[ 	fmt = function(str) ]]
---[[ 		return str ]]
---[[ 	end, ]]
+--[[ 	color = { gui = "bold" }, ]]
 --[[ } ]]
 -- local filetype = {
 -- 	"filetype",

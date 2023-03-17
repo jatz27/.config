@@ -19,9 +19,11 @@ git config --system user.email $email
 #Add buckets of scoop
 scoop bucket add main
 scoop bucket add extras
+scoop bucket add nerd-fonts
 #Install packages for config pwsh
-$pwsh_list = "alacritty", "starship", "lf", "lazygit", "bat"
-scoop install $pwsh_list
+$install_list = "sudo", "alacritty", "starship", "lf", "lazygit", "bat", "neovim", "nvm", "zig", "stylua"
+scoop install $install_list
+sudo scoop install -g JetBrainsMono-NF
 
 # Configuration alacritty
 $path_alacritty= Test-Path $HOME\AppData\Roaming\alacritty
@@ -57,15 +59,9 @@ if ($path_lf -eq $False){
       New-Item -ItemType SymbolicLink -Path $HOME\AppData\Local\lf -Value $HOME\.config\lf
     }
 
-
-
-#Install packages for config neovim
-$nvim_list = "neovim", "nvm", "zig", "stylua"
-scoop install $nvim_list
-
 #Install node and npm with nvm
-nvm install node
-nvm use node
+nvm install 19.8.1
+nvm use 19.8.1
 
 #NeoVim
 # SymbolicLink for configuration Neovim

@@ -5,6 +5,12 @@ Install with [scoop](https://scoop.sh/#/) or [chocolatey](https://chocolatey.org
 
 ### Install
 [font JetBrainsMono](https://www.nerdfonts.com/font-downloads)<br>
+``````powershell
+#Install JetBrainsMono with scoop
+scoop install sudo
+scoop bucket add nerd-fonts
+sudo scoop install -g JetBrainsMono-NF
+``````
 [alacritty](https://alacritty.org/)\
 [powershell core](https://github.com/PowerShell/PowerShell/releases)\
 [starship](https://starship.rs/)\
