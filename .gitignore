@@ -3,6 +3,7 @@ scoop
 nvim/plugin/packer_compiled.lua
 lf/history
 lf/files
+lf/tags
 # session
 
 # Archivos compilados de lua
