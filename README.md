@@ -64,3 +64,8 @@ cmp-tabnine you have to run the manual script in the installation path
 ``````````powershell
 . $HOME\AppData\Local\nvim-data\lazy\cmp-tabnine\install.ps1
 ``````````
+### Web-tools
+Sync web and hot reload, install require
+``````````powershell
+npm install -g browser-sync
+``````````
