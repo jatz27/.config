@@ -64,6 +64,11 @@ cmp-tabnine you have to run the manual script in the installation path
 ``````````powershell
 . $HOME\AppData\Local\nvim-data\lazy\cmp-tabnine\install.ps1
 ``````````
+### Null-ls
+Format code to save file.
+[stylua](https://scoop.sh/#/apps?s=0&d=1&o=true&q=stylua)
+[prettier](https://prettier.io/)
+[black](https://pypi.org/project/black/)
 ### Web-tools
 Sync web and hot reload, install require
 ``````````powershell
