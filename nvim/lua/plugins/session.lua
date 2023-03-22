@@ -9,7 +9,6 @@ return {
 	},
 	config = function()
 		vim.g.startify_session_autoload = 1
-		--[[ vim.g.startify_session_dir = vim.fn.stdpath("data") .. "/sessions/" ]]
-		vim.g.startify_session_dir = "$HOME/AppData/Local/nvim-data/sessions"
+		vim.g.startify_session_dir = vim.fn.stdpath("data") .. "/sessions/"
 	end,
 }
