@@ -1,5 +1,3 @@
-[![Captura-de-pantalla-2023-03-21-141810.png](https://i.postimg.cc/MHVbn4nk/Captura-de-pantalla-2023-03-21-141810.png)](https://postimg.cc/m1ZFqm3V)
-
 # Dotfiles
 
 My Dotfiles configuration for powershell\
