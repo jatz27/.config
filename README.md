@@ -90,6 +90,12 @@ New-Item -ItemType SymbolicLink -Path $HOME\AppData\Local\nvim -Value $HOME\.con
 
 ### Tabnine
 
+tabnine autocomplete `Alt+a` you have to run the manual script in the installation path
+
+```powershell
+. $HOME\AppData\Local\nvim-data\lazy\tabnine-nvim\dl_binaries.ps1
+```
+
 cmp-tabnine you have to run the manual script in the installation path
 
 ```powershell
