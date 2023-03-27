@@ -12,7 +12,7 @@ return {
 		"L3MON4D3/LuaSnip", --snippet engine
 		"rafamadriz/friendly-snippets", -- a bunch of snippets to use
 		-- Tabnine complete
-		{ "tzachar/cmp-tabnine", build = "powershell ./install.ps1" },
+		{ "tzachar/cmp-tabnine", build = "pwsh.exe -file .\\install.ps1" },
 	},
 	config = function()
 		require("util.cmp")

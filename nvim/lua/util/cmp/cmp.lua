@@ -3,6 +3,9 @@ if not cmp_status_ok then
 	return
 end
 
+vim.api.nvim_set_hl(0, "MyPmenu", { bg = "#191c24", fg = "#afb7c6" })
+vim.api.nvim_set_hl(0, "MyPmenuSel", { bg = "#d89079", fg = "#191c24", bold = true, italic = false })
+
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
 	return
@@ -44,6 +47,14 @@ local kind_icons = {
 	TypeParameter = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
+
+local source_mapping = {
+	nvim_lsp = "[LSP]",
+	cmp_tabnine = "[TN]",
+	luasnip = "[Snippet]",
+	buffer = "[Buffer]",
+	path = "[Path]",
+}
 
 cmp.setup({
 	snippet = {
@@ -100,13 +111,20 @@ cmp.setup({
 			-- Kind icons
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-			vim_item.menu = ({
-				nvim_lsp = "[LSP]",
-				cmp_tabnine = "[TN]",
-				luasnip = "[Snippet]",
-				buffer = "[Buffer]",
-				path = "[Path]",
-			})[entry.source.name]
+			vim_item.menu = source_mapping[entry.source.name]
+			if entry.source.name == "cmp_tabnine" then
+				local detail = (entry.completion_item.data or {}).detail
+				vim_item.kind = ""
+				if detail and detail:find(".*%%.*") then
+					vim_item.kind = vim_item.kind .. " " .. detail
+				end
+
+				if (entry.completion_item.data or {}).multiline then
+					vim_item.kind = vim_item.kind .. " " .. "[ML]"
+				end
+			end
+			local maxwidth = 80
+			vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
 			return vim_item
 		end,
 	},
@@ -121,9 +139,12 @@ cmp.setup({
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
 	},
-	--[[ documentation = { ]]
-	--[[ border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, ]]
-	--[[ }, ]]
+	window = {
+		completion = cmp.config.window.bordered({
+			border = "none",
+			winhighlight = "Normal:MyPmenu,FloatBorder:MyPmenu,CursorLine:MyPmenuSel,Search:None",
+		}),
+	},
 	experimental = {
 		ghost_text = false,
 		native_menu = false,
