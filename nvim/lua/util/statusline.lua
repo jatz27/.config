@@ -122,7 +122,7 @@ lualine.setup({
 				cond = function()
 					return package.loaded["noice"] and require("noice").api.status.mode.has()
 				end,
-				color = { fg = "#ff9364" },
+				color = { fg = "#d89079" },
 			},
 			{
 				function()
@@ -131,7 +131,7 @@ lualine.setup({
 				cond = function()
 					return package.loaded["noice"] and require("noice").api.status.search.has()
 				end,
-				color = { fg = "#ff9364" },
+				color = { fg = "#d89079" },
 			},
 		},
 		lualine_y = {
