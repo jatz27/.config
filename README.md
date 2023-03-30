@@ -79,6 +79,7 @@ New-Item -ItemType SymbolicLink -Path $HOME\AppData\Local\lf -Value $HOME\.confi
 [zig](https://scoop.sh/#/apps?q=zig&s=0&d=1&o=true)\
 [7zip](https://www.7-zip.org/)\
 [stylua](https://scoop.sh/#/apps?s=0&d=1&o=true&q=stylua)
+[ripgrep](https://github.com/BurntSushi/ripgrep)
 
 > NOTE: Execute como admin for create `Symboliclink` of config nvim
 
@@ -108,6 +109,14 @@ Format code to save file.<br>
 [stylua](https://scoop.sh/#/apps?s=0&d=1&o=true&q=stylua)\
 [prettier](https://prettier.io/)\
 [black](https://pypi.org/project/black/)
+
+### Telescope
+
+Search for word in the project install ripgrep
+
+```powershell
+scoop install ripgrep
+```
 
 ### Web-tools
 
