@@ -162,7 +162,7 @@ local buttons = {
 		{ type = "padding", val = 1 },
 		dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 		dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-		dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
+		dashboard.button("s", "  Sessions", ":SessionManager load_session<CR>"),
 		dashboard.button("d", "  Database", ":tab DBUI <CR>"),
 		dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 		dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),

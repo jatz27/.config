@@ -87,9 +87,9 @@ return {
 			["D"] = { ":tab DBUI<cr>", "DatabaseUI" },
 			s = {
 				name = "Session manager",
-				s = { "<cmd>SSave<cr>", "Save Session" },
-				l = { "<cmd>SLoad<cr>", "Load Session" },
-				d = { "<cmd>SDelete<cr>", "Delete Session" },
+				s = { "<cmd>SessionManager save_current_session<cr>", "Save Session" },
+				l = { "<cmd>SessionManager load_session<cr>", "Load Session" },
+				d = { "<cmd>SessionManager delete_session<cr>", "Delete Session" },
 			},
 			w = {
 				name = "Web Live Server",
