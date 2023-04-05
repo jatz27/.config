@@ -12,14 +12,14 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-lua/popup.nvim",
-		{
-			"ahmedkhalf/project.nvim",
-			keys = {
-				{ "<M-p>", "<cmd>Telescope projects<cr>", mode = "n" },
-			},
-			config = function()
-				require("util.telescope.project")
-			end,
-		},
+		--[[ { ]]
+		--[[ 	"ahmedkhalf/project.nvim", ]]
+		--[[ 	keys = { ]]
+		--[[ 		{ "<M-p>", "<cmd>Telescope projects<cr>", mode = "n" }, ]]
+		--[[ 	}, ]]
+		--[[ 	config = function() ]]
+		--[[ 		require("util.telescope.project") ]]
+		--[[ 	end, ]]
+		--[[ }, ]]
 	},
 }
