@@ -37,11 +37,10 @@ mapper("n", "<C-k>", "<C-w>k")
 mapper("n", "<C-l>", "<C-w>l")
 
 -- Usando alt + hjkl cambia el tamanio de las ventanas
-mapper("n", "<M-j>", ":resize -2<CR>")
-mapper("n", "<M-k>", ":resize +2<CR>")
-mapper("n", "<M-h>", ":vertical resize -2<CR>")
-mapper("n", "<M-l>", ":vertical resize +2<CR>")
-
+--[[ mapper("n", "<M-j>", ":resize -2<CR>") ]]
+--[[ mapper("n", "<M-k>", ":resize +2<CR>") ]]
+--[[ mapper("n", "<M-h>", ":vertical resize -2<CR>") ]]
+--[[ mapper("n", "<M-l>", ":vertical resize +2<CR>") ]]
 -- Borrar el resaltado de busquedas /
 mapper("n", ".,", ":nohlsearch<CR>")
 mapper("n", ",.", ":nohlsearch<CR>")
@@ -50,8 +49,8 @@ mapper("n", ",.", ":nohlsearch<CR>")
 mapper("n", "<C-z>", "u")
 
 -- Indentar desde modo visual
-mapper("v", "<", "<gv")
-mapper("v", ">", ">gv")
+--[[ mapper("v", "<", "<gv") ]]
+--[[ mapper("v", ">", ">gv") ]]
 -- Mover texto arriba y abajo en modo visual
-mapper("v", "J", ":move '>+1<CR>gv-gv")
-mapper("v", "K", ":move '<-2<CR>gv-gv")
+--[[ mapper("v", "J", ":move '>+1<CR>gv-gv") ]]
+--[[ mapper("v", "K", ":move '<-2<CR>gv-gv") ]]

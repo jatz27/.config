@@ -1,7 +1,6 @@
 return {
 	"AlexvZyl/nordic.nvim",
 	dependencies = {
-		"rktjmp/lush.nvim",
 		"kyazdani42/nvim-web-devicons", --Iconos
 	},
 	lazy = false,
