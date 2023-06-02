@@ -27,6 +27,7 @@ return {
 				"toml",
 				"yaml",
 				"markdown",
+				"latex",
 				--[[ "rust", ]]
 				--[[ "c", ]]
 				--[[ "bash", ]]

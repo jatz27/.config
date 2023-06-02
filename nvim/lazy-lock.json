@@ -55,6 +55,7 @@
   "vim-matchup": { "branch": "master", "commit": "156367e4cbd123bc9a70eeabeaa16f7cf9239e12" },
   "vim-maximizer": { "branch": "master", "commit": "2e54952fe91e140a2e69f35f22131219fcd9c5f1" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
+  "vimtex": { "branch": "master", "commit": "18255a2370812696138cb415a5b02925d33ef569" },
   "web-tools.nvim": { "branch": "master", "commit": "16730bd5867cec5ec681b250214ba0b41b7b63a7" },
   "which-key.nvim": { "branch": "main", "commit": "4b73390eec680b4c061ea175eb32c0ff3412271d" }
 }
