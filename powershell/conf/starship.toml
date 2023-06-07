@@ -64,7 +64,7 @@ disabled = false
 truncation_length = 1
 # truncation_symbol = "…/"
 style = "bold bg:#f43154 fg:#ffffff"
-home_symbol = " ~"
+home_symbol = " ~"
 read_only_style = "bold bg:#dc291e fg:#ffffff"
 read_only = "  "
 format = "[ $path ]($style)[$read_only]($read_only_style)"
@@ -76,7 +76,7 @@ format = "[$powershell_indicator]($style)"
 disabled = false
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "[ $symbol$branch ]($style)"
 # truncation_length = 4
 # truncation_symbol = "…/"
@@ -101,14 +101,14 @@ deleted = " $count "
 #format = "[ $context](bold blue) "
 
 [python]
-symbol = " "
+symbol = " "
 format = '[ ${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 # format = "via [$symbol $version $virtualenv]($style)"
 detect_extensions = ["py"]
 style = "bold fg:#ebcc34 bg:#191f48"
 
 [nodejs]
-symbol = " "
+symbol = "󰎙 "
 format = "[ $symbol$version ]($style)"
 style = "bold fg:#33dd2d bg:#191f48"
 detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
@@ -120,7 +120,7 @@ format = "[ $symbol$version ]($style)"
 detect_extensions = ["rs"]
 
 [package]
-symbol = " "
+symbol = " "
 style = "bold fg:#003642 bg:#76bddb"
 format = "[ $symbol$version ]($style)"
 

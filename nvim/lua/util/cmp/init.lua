@@ -4,4 +4,3 @@ if not status_cmp then
 end
 
 require("util.cmp.cmp")
-require("util.cmp.tabnine")
