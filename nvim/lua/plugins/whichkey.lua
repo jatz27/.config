@@ -85,6 +85,7 @@ return {
 			--[[ ["|"] = { "<cmd>vsplit<CR>", "Vertical" }, ]]
 			["l"] = { "<cmd>Lazy<CR>", "Open Lazy" },
 			["D"] = { ":tab DBUI<cr>", "DatabaseUI" },
+			["c"] = { "<cmd>VimtexCompile<cr>", "Compile latex" },
 			s = {
 				name = "Session manager",
 				s = { "<cmd>SessionManager save_current_session<cr>", "Save Session" },
@@ -97,9 +98,9 @@ return {
 				r = { "<cmd>BrowserRestart<cr>", "Restart Server" },
 				s = { "<cmd>BrowserStop<cr>", "Stop Server" },
 			},
-			M = {
+			m = {
 				name = "Markdown Preview",
-				p = { "<cmd>MarkdownPreview<cr>", "Open Server of Markdown" },
+				o = { "<cmd>MarkdownPreview<cr>", "Open Server of Markdown" },
 				s = { "<cmd>MarkdownPreviewStop<cr>", "Stop Server of Markdown" },
 				t = { "<cmd>MarkdownPreviewToggle<cr>", "Toggle Server of Markdown" },
 			},

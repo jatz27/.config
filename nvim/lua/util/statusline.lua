@@ -27,7 +27,7 @@ local diagnostics = {
 
 local diff = {
 	"diff",
-	symbols = { added = " ", modified = "柳", removed = " " }, -- changes diff symbols
+	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
 	colored = true,
 	diff_color = {
 		added = { fg = "#98c379" },
