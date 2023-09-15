@@ -11,7 +11,7 @@ bufferline.setup({
 		diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
 		diagnostics_update_in_insert = true,
 		diagnostics_indicator = function(count, level)
-			local icon = level:match("error") and " " or level:match("warning") and " " or " "
+			local icon = level:match("error") and " " or level:match("warning") and " " or " "
 			return " " .. icon .. count
 		end,
 		offsets = { { filetype = "nvimtree", text = "file explorer", text_align = "center", padding = 0 } },
