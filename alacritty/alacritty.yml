@@ -3,9 +3,16 @@ env:
   TERM: xterm-256color
 shell:
   # program: "C:\\Windows\\system32\\cmd.exe"
-  program:
-    "pwsh"
-    #working_directory: %USERPROFILE% #AddNameOfUser
+  ############### Para que inicie con wsl
+  # program: "wsl"
+  # args:
+  #   - --cd ~
+  # --------------------------------------------
+  ############### Para que inicie con powershell
+  "pwsh"
+  # -----------------------------------------
+  #working_directory: %USERPROFILE% #AddNameOfUser
+  # working_directory: \\wsl.localhost\Debian\home\jatz #AddNameOfUser
 
 font:
   normal:
@@ -63,7 +70,7 @@ cursor:
     #   - | Beam
     shape: Beam
 
-draw_bold_text_with_bright_colors: true
+# draw_bold_text_with_bright_colors: true
 
 live_config_reload: true
 
@@ -95,7 +102,8 @@ selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: true
+  save_to_clipboard:
+    true
 
     # theme Nordic https://github.com/AlexvZyl/nordic.nvim
 colors:

@@ -18,7 +18,7 @@ Set-PSReadLineOption -PredictionViewStyle InlineView
 
 # Starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\powershell\conf\starship.toml"
-$ENV:STARSHIP_DISTRO = ""
+$ENV:STARSHIP_DISTRO = " "
 Invoke-Expression (&starship init powershell)
 
 # Utilities
