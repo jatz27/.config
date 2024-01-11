@@ -16,6 +16,7 @@ null_ls.setup({
 		--[[ formatting.black, ]]
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.latexindent,
+		formatting.gofmt,
 		--[[ formatting.rustfmt, ]]
 		--[[ formatting.sql_formatter, ]]
 		--[[ diagnostics.flake8, ]]
