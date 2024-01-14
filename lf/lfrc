@@ -17,14 +17,16 @@ map ga cd A:\\
 map XX delete $Env:f
 
 # Functions utils */
+# Create a new directory
 map ad ${{
   $dir_name = Read-Host "Directory Name: "
   New-Item $dir_name -ItemType Directory
 }}
-
+# Create a new file
 map af ${{
   $file_name = Read-Host "File Name: "
   New-Item $file_name -ItemType File
 }}
 
-map x $explorer .
+# Open explorer to windows
+map e $explorer .
