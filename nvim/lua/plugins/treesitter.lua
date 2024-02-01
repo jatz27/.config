@@ -28,6 +28,8 @@ return {
 				"yaml",
 				"markdown",
 				"latex",
+				"astro",
+				"go",
 				--[[ "rust", ]]
 				--[[ "c", ]]
 				--[[ "bash", ]]
