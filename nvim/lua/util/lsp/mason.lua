@@ -9,6 +9,8 @@ local servers = {
 	"cssls",
 	"powershell_es",
 	"texlab",
+	"gopls",
+	"astro",
 	--[[ "angularls", ]]
 	--[[ "eslint", ]]
 	--[[ "bashls", ]]
