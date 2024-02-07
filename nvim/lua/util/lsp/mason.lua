@@ -11,6 +11,7 @@ local servers = {
 	"texlab",
 	"gopls",
 	"astro",
+	"tailwindcss",
 	--[[ "angularls", ]]
 	--[[ "eslint", ]]
 	--[[ "bashls", ]]
