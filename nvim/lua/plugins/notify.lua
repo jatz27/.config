@@ -11,6 +11,7 @@ return {
 	},
 	opts = {
 		timeout = 2000,
+		background_colour = "#000000",
 		render = "compact",
 		stages = "fade",
 		max_height = function()

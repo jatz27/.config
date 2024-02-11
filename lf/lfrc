@@ -19,14 +19,17 @@ map XX delete $Env:f
 # Functions utils */
 # Create a new directory
 map ad ${{
-  $dir_name = Read-Host "Directory Name: "
+  $dir_name = Read-Host "Directory Name"
   New-Item $dir_name -ItemType Directory
 }}
 # Create a new file
 map af ${{
-  $file_name = Read-Host "File Name: "
+  $file_name = Read-Host "File Name"
   New-Item $file_name -ItemType File
 }}
 
 # Open explorer to windows
 map e $explorer .
+
+# Open vscode
+map C $code .
